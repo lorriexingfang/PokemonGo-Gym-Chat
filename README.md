@@ -18,23 +18,16 @@
 
 Discover and explore your nearby Pokemon Gyms.
 
-![Demo ScreenShot](http://zifacdn.oss-cn-hangzhou.aliyuncs.com/Launching_page.png)
 
 FEATURES
 
-Forum for nearby gyms
+-- Forum for nearby gyms
 
-![Demo ScreenShot](http://zifacdn.oss-cn-hangzhou.aliyuncs.com/Pokegym-Go-1-1242.png)
+-- Meet teammates and inviting them for a battle/training
 
-Meet teammates and inviting them for a battle/training
+-- Share how many pokemons you defeated by uploading snapshots
 
-![Demo ScreenShot](http://zifacdn.oss-cn-hangzhou.aliyuncs.com/Pokegym-Go-2-1242.png)
-
-Share how many pokemons you defeated by uploading snapshots
-
-![Demo ScreenShot](http://zifacdn.oss-cn-hangzhou.aliyuncs.com/Pokegym-Go-3-1242.png)
-
-Chat with trainers and hangout with them
+-- Chat with trainers and hangout with them
 
 ![Demo ScreenShot](http://zifacdn.oss-cn-hangzhou.aliyuncs.com/Pokegym-Go-4-1242.png)
 
