@@ -51,15 +51,13 @@ App.icons({
 });
 
 App.launchScreens({
-  'iphone': 'resource/splash_768_1024.png',
-  'iphone_2x': 'resource/splash_640_960.png',
-  'iphone5': 'resource/splash_640_1136.png',
-  'iphone6': 'resource/splash_750_1334.png',
-  'iphone6p_portrait': 'resource/splash_1242_2208.png',
-  'ipad_portrait': 'resource/splash_768_1024.png',
-  'ipad_portrait_2x': 'resource/splash_1536_2048.png',
-  'android_ldpi_portrait': 'resource/splash.png',
-  'android_mdpi_portrait': 'resource/splash.png',
-  'android_hdpi_portrait': 'resource/splash.png',
-  'android_xhdpi_portrait': 'resource/splash.png'
+  'iphone': 'resource/launchScreen_640_960.png',
+  'iphone_2x': 'resource/launchScreen_640_960.png',
+  'iphone5': 'resource/launchScreen_640_1136.png',
+  'iphone6': 'resource/launchScreen_750_1334.png',
+  'iphone6p_portrait': 'resource/launchScreen_1242_2208.png',
+  'android_ldpi_portrait': 'resource/launchScreen_480_800.png',
+  'android_mdpi_portrait': 'resource/launchScreen_480_800.png',
+  'android_hdpi_portrait': 'resource/launchScreen_480_800.png',
+  'android_xhdpi_portrait': 'resource/launchScreen_480_800.png'
 });
