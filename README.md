@@ -29,7 +29,5 @@ FEATURES
 
 -- Chat with trainers and hangout with them
 
-![Demo ScreenShot](http://zifacdn.oss-cn-hangzhou.aliyuncs.com/Pokegym-Go-4-1242.png)
-
 ## 2. Implementation
 
