@@ -11,54 +11,46 @@
 All the three steps above can be done by using Ubuntu Make:
 
 1\. Add the Ubuntu Make ppa:
-    ```
+    
 	$ sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
 	$ sudo apt-get update
-	```
 
 2\. Install Ubuntu Make:
-    ```
+
 	$ sudo apt-get install ubuntu-make
-	```
+
 
 Use Ubuntu Make to install Android Studio and all dependencies:
-    ```
-	$ umake android
-	```
 
-3\. Install Meteor from [**Meteor Installation] (Install Meteor (https://www.meteor.com/install)
-   ```
+	$ umake android
+
+3\. Install Meteor from [**Meteor Installation](Install Meteor (https://www.meteor.com/install)
+
    $ curl https://install.meteor.com/ | sh
-   ```
 
 4\. Set environment variables:
 
 Add these lines on ~/.bashrc:
-	```
+
 	export ANDROID_HOME="/home/<username>/Android/Sdk"
 	export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-	```
 
 After these steps, we change to the directory of our project and add Cordova platform:
-    ```
+
     $ cd PokemonGo-Chat/pokemonchat-mobile
 	$ meteor add-platform android
-	```
 
 Pokegmon Gym Club should be run on Meteor 1.2.1. Just run the app by:
-    ```
+
 	$ meteor run android-device --release 1.2.1
-	```
 
 Then we can run the app on the emulator by:
-    ```
+
 	$ meteor run android
-    ```
 
 Or on the phone that has been connected to the computer by a USB cable:
-    ```
+
 	$ meteor run android-device
-	```
 
 ###Possible Errors and Solutions:
 
