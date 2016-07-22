@@ -31,7 +31,7 @@ FEATURES
 
 ## 2. Implementation
 
-Android:
+###Android:
 
 Installing Prerequisites(for Android):
 1. Install JDK.
@@ -63,32 +63,29 @@ Use Ubuntu Make to install Android Studio and all dependencies:
 
 4. Set environment variables:
 Add these lines on ~/.bashrc:
-	# Android
 	```
 	export ANDROID_HOME="/home/<username>/Android/Sdk"
 	export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 	```
-
 After these steps, we change to the directory of our project and add Cordova platform:
     ```
     $ cd PokemonGo-Chat/pokemonchat-mobile
 	$ meteor add-platform android
 	```
-
 Pokegmon Gym Club should be run on Meteor 1.2.1. Just run the app by:
     ```
 	$ meteor run android-device --release 1.2.1
 	```
-
 Then we can run the app on the emulator by:
+    ```
 	$ meteor run android
-
+    ```
 Or on the phone that has been connected to the computer by a USB cable:
     ```
 	$ meteor run android-device
 	```
-=================================================================================================================
-Possible Errors and Solutions:
+
+###Possible Errors and Solutions:
 1. When running the app on the phone:
 	name: 'CordovaError',
 	message: 'Failed to deploy to device, no devices found.',
