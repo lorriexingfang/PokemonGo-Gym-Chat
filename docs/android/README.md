@@ -19,12 +19,11 @@ All the three steps above can be done by using Ubuntu Make:
 
 	$ sudo apt-get install ubuntu-make
 
-
 Use Ubuntu Make to install Android Studio and all dependencies:
 
 	$ umake android
 
-3\. Install Meteor from [**Meteor Installation](Install Meteor (https://www.meteor.com/install)
+3\. Install Meteor from [**Meteor Installation] (https://www.meteor.com/install)
 
    $ curl https://install.meteor.com/ | sh
 
@@ -98,9 +97,13 @@ Solution:
 		✓ Gradle           
 	
 Solution:
-	Simply run "$ /home/<username>/Android/Sdk/tools/android",and selected the SDK Platfoem for the corresponding API version and the latest other two.
+	Simply run 
+
+	"$ /home/<username>/Android/Sdk/tools/android",and selected the SDK Platfoem for the corresponding API version and the latest other two.
 	Delete 'android' under <project>/.meteor/local/platforms.
-	run "$ meteor add-platform android"
+	run 
+
+	$ meteor add-platform android
 	
 4\. When running the app on the phone:
 
