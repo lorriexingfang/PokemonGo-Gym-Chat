@@ -3,7 +3,7 @@
 <table width="100%">
     <tr>
         <td width="100"><img src="http://zifacdn.oss-cn-hangzhou.aliyuncs.com/PokegymGo.png" width="72px" height="72px" alt="RaidCDN logo"/></td>
-        <td>Pokegmon Gym Club is the first open source mobile app (both for iOS and Android) which works as a forum for nearby Pokemon gyms. It is a community where trainers can find their teammates and go to the Pokemon battlefield for a fight. Pokemon lovers will make friends here by uploading their battle snapshots, chatting with other trainers, and go for a battle together.
+        <td>Pokegmon Gym Club is the first open source mobile app (both for iOS and Android) which works as a Pokemon fans' club for nearby Pokemon gyms. It is a community where trainers can find their teammates and go to the Pokemon battlefield for a fight. Pokemon lovers will make friends here by uploading their battle snapshots, chatting with other trainers, and go for a battle together.
     </td>
     </tr>
 </table>
