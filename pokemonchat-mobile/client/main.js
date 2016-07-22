@@ -610,14 +610,12 @@ Meteor.startup(function () {
         });
 
         //show splashing page
-        navigator.splashscreen.hide();
+        // navigator.splashscreen.hide();
         if (window.localStorage.getItem("firstLog") == null || window.localStorage.getItem("firstLog") == undefined) {
           var flag;
           flag = window.localStorage.getItem("firstLog") == 'first';
           Session.set('isFlag', !flag);
-          Session.set('view',"splashScreen");
-        } else {
-            Session.set('view','wifiIndex');
+          Session.set('view',"wifiIndex");
         }
         //end
         safeUpdateDeviceWifi();
