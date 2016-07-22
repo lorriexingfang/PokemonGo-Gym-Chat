@@ -1,0 +1,18 @@
+<template name="mainLayout">
+  {{#if isDialog}}
+  <div id="wrap" style="display:none;">
+      {{> Template.dynamic template=view data=data}}
+  </div>
+  <div id="wrap_dialog">
+      {{> Template.dynamic template=dialog_view}}
+  </div>
+  {{else}}
+  <div id="wrap">
+      {{> Template.dynamic template=view data=data}}
+  </div>
+  {{/if}}
+  {{#if is_show_footer}}
+    {{> footer}}
+  {{/if}}
+  {{> photo_swipe}}
+</template>

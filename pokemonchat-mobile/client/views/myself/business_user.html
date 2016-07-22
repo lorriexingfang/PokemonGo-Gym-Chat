@@ -1,0 +1,29 @@
+<template name='business_user'>
+  <div class="head">
+    <strong>{{title}}</strong>
+    <div class="leftButton button_left"><i class="fa fa-chevron-left"></i></div>   
+    <button class="h-dh button_right rightButton btn btn-default">群发消息</button>
+  </div>
+  
+  <div class="wifiOnline">
+    <div class="main">
+      <ul class="wifi-user">
+        {{#if noUsers users}}
+          <span>暂时还没有顾客哦～</span>
+        {{/if}}
+        {{#each users}}
+          <li id="{{userId}}">
+            <div class="img"><img src="{{userPicture}}" /></div>
+            <div class="content">
+              <div class="title">{{userName}}<span>[{{status this.status}}]</span></div>
+              <div class="con-main">
+                <span class="timer"><i class="fa fa-clock-o"></i>{{time lastTime}}</span>
+                <span class="text">{{userSignature}}</span>
+              </div>
+            </div>
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</template>

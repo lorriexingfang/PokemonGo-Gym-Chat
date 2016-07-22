@@ -1,0 +1,16 @@
+<template name="wifiPubwifiPasswd">
+  <div class="dashBoard">
+    <div class="head">
+      <strong>{{_ "wifiPass"}}</strong>
+      <div id="btn_back" class="leftButton"><i class="fa fa-chevron-left"></i></div>
+    </div>
+    <div class="set-up">
+      <ul>
+        <li class="text">
+          <input type="text" id="wifi_passwd" placeholder="{{_ "wifiPass"}}" value="{{oldPasswd}}" maxlength="15" />
+        </li>
+      </ul>
+      <div class="buttons"><button type="button" class="btn btn-primary btn-block btn-lg btn-submit">{{_ "submitChange"}}</button></div>
+    </div>
+  </div>
+</template>

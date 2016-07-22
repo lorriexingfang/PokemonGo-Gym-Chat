@@ -1,0 +1,132 @@
+<!--Tim Zhang-->
+<!--
+<template name="theme_location">
+  <div class="theme_location">
+    <div id="background" style="background-image:url({{theme.bg}});">
+      <div class="head">
+            <div id="btn_back" class="leftButton"><i class="fa fa-chevron-left"></i></div>
+            <strong>{{theme.title}}</strong>
+      </div>
+      <div class='themeBtn'>
+        <div class='toPartner'><i class="fa fa-users"></i><span>搭伙旅行</span></div>
+        <div class='vertical'></div>
+        <div class="toLocal"><i class="fa fa-flag"></i><span>当地人服务</span></div>
+      </div>
+    </div>
+  </div>
+</template>
+-->
+<template name="partner_theme">
+	<div id="partner_theme">
+<!--      <div id="theme_background" style="background-image:url({{theme.bg}});"></div>-->
+      <div class="head">
+          <div id="btn_back" class="leftButton"><i class="fa fa-chevron-left"></i>
+          </div>
+          <strong>{{theme.title}}</strong>
+          <button id="add" class="rightButton btn btn-default">来搭伙</button>
+      </div>
+      {{#if showAd theme.ad}}
+      <ul class="lists">
+          <li id="{{theme.content}}">
+              <tt>{{theme.adtitle}}</tt><br>
+              <i>{{theme.ad}}</i>
+          </li>
+      </ul>
+      {{else}}
+      <div class="partner_lists" style="margin-top: 60px; ">
+        <div class="layer layer_no_border">
+            <div id="{{theme.title}}" class="title notes_title">当地游记<div class="button"><i class="fa fa-chevron-right"></i></div></div>
+            <div id="{{theme.title}}" class="noets_first">
+              {{#each notes}}
+              <div style="width:100%; height:120px;overflow: hidden;">
+                {{> spinner_master}}
+                <img class="lazy2" data-original="{{titleImage.url}}" style="width:100%; min-height:120px;">
+              </div>
+              --{{title}}
+              {{/each}}
+            </div>
+        </div>
+      </div>
+      {{/if}}
+      <div id="theme_list">
+          {{#each lists}}
+          {{> theme_list}}
+          {{/each}}
+      </div>
+	</div>
+</template>
+<template name="theme_list">
+	<div class="partner_lists" id="{{_id}}" style="margin-bottom:10px;">
+		<dl>
+			<dt class="userHome" id="{{userId}}"><img class="lazy" src="/lazy-loading.gif" data-original="{{userPicture}}"></dt>
+            {{#if showShop shopId}}
+            <div id="{{shopId}}" class="shop"><i class="fa fa-star" style="color:#ffd700"></i><span>{{shopName}}</span></div>
+            {{/if}}
+           <!-- <dd><b class="userHome" id="{{userId}}">{{get_name userId}}</b><div>{{time_diff createdAt}}</div></dd>-->
+            <div class="userName"><b class="userHome" id="{{userId}}">{{nike}}</b></div>
+            <div class="createAt">
+              <!-- {{time_diff createdAt}} -->
+              {{#if title}}
+              <div>{{title}}</div>
+              {{/if}}
+              <div><b>出发时间：</b>{{format_day startDate days}}</div>
+            </div>
+            {{#if show_distance}}
+            <div class="distance">{{get_distance this}}</div>
+            {{/if}}
+            {{#if is_my this}}
+            <div id="{{_id}}" class="edit">编辑</div>
+            <div id="{{_id}}" class="delete">删除</div>
+            {{/if}}
+            {{#if is_admin}}
+            <div id="{{_id}}" class="reportNumber">举报数量{{report}}</div>
+            <button id="{{_id}}" class="btn btn-default delete">删除</button>
+            {{/if}}
+		</dl>
+        <div class="h3 xc">
+            {{text}}
+        </div>
+
+
+		<ol id="{{_id}}">
+            {{#each images}}
+                <li class="photo">
+                  <img class="lazy" src="/lazy-loading-70.gif" data-original="{{this.url}}">
+                </li>
+            {{/each}}
+		</ol>
+		
+        <div class="status">
+            <!-- <div class="browse"><span>浏览({{views_count views}})</span></div> -->
+
+            <div style="margin: px 0px;margin-bottom: 9px;">感兴趣的小伙伴</div>
+            
+              {{#each joins toJoin}}
+                      <span class="viewer userHome" id="{{this.userId}}"><div class="join"></div><img src="{{get_face this.userId}}"></span>
+              {{/each}}
+              {{#each looks toJoin views}}
+                <span class="viewer userHome" id="{{this.userId}}"><img src="{{get_face this.userId}}"></span>
+              {{/each}}
+              <span id="{{_id}}" class="viewer viewerList" style="line-height: 33px;float: right;"> <i class="fa fa-chevron-right"></i></span>
+			
+        </div>
+
+        <div class="status_addres">
+            <div class="addres">
+            {{#if city}}
+            <i class="fa fa-map-marker"></i>  <span>{{city}}</span>
+            {{/if}}
+            </div>
+            <div class="remark"><span><img src="/view_count.png" style="width:21px" > {{view_times toJoin views}}&nbsp;&nbsp;
+            <img src="/tour_comment.png" > {{replys_count replys}}</span></div>
+    </div>
+	</div>
+</template>
+<template name="viewer">
+    <span class="viewer"><img src="{{get_face userId}}">
+        {{#if viewerisjoin toJoin}}
+        <div class="join"></div>
+        {{/if}}
+    </span>
+    <span class="viewer"><b>...</b></span>
+</template>

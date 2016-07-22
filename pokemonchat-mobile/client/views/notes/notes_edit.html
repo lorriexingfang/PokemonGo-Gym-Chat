@@ -1,0 +1,49 @@
+<template name="notes_edit">
+  <div id="partner_activities">
+    <div class="head">
+        <strong >{{page_title}}</strong>
+        <div class="leftButton button_left"><i class="fa fa-chevron-left"></i></div>  
+        <button class="button_right rightButton btn btn-default">完成</button>
+    </div>
+    <form role="form" id="add-notes-form" class='add-notes-form'>
+      <div class="add_partner" style="padding: 10px 10px;margin-bottom: 40px;">
+          <dl>
+              <dt>标题</dt>
+              <dd><input id="title" name="title" type="text" value="{{title}}" style="width:90%;" placeholder="文章标题"></dd>
+          </dl>
+          {{#if is_blackborad}}
+          <dl>
+              <dt>简短描述</dt>
+              <dd>
+                <textarea id="subtitle" name="subtitle" placeholder="简短描述" style="width:90%;height:100px;" value="{{subtitle}}"></textarea>
+              </dd>
+          </dl>
+          {{/if}}
+          {{#if is_admin}}
+          <dl>
+              <dt>标题图片</dt>
+              <dd><input id="titleImage" name="titleImage" type="text" value="" style="width:90%;" placeholder="标题图片"></dd>
+          </dl>
+          {{/if}}
+          <dl id="content_dl" >
+              <dt>内容介绍</dt>
+              {{#each contents}}
+              {{#if is_txt}}
+              <dd><textarea id="content" name="content" placeholder="介绍内容" style="width:90%;height:150px;" value="{{content}}"></textarea>
+              <i id="delete" class="fa fa-trash-o fa-3x delete" style="font-size:24px;color:#eb3941"></i></dd>
+              {{else}}
+              <dd><img style="width:90%;" src="{{url}}" /><i id="delete" class="fa fa-trash-o fa-3x delete" style="font-size:24px;color:#eb3941"></i></dd>
+              {{/if}}
+              {{/each}}
+          </dl>
+          <button type="button" id="addphoto" style="margin-top: 10px;background-color: transparent;border: 0px;">
+           <div> <i class="fa fa-photo fa-3x" style="font-size:24px;padding: 10px;"></i></div>
+          插入图片</button>
+
+          <button type="button" id="addtext" style="margin-top: 10px;margin-top: 10px;background-color: transparent;border: 0px;" >
+           <div> <i class="fa fa-file-text fa-3x" style="font-size:24px;padding: 10px;"></i></div>
+          插入文字</button>
+      </div>
+    </form>
+  </div>
+</template>

@@ -1,0 +1,133 @@
+/*
+@bishen.org
+2014.11.12
+*/
+.dashBoard {background-color: #fff;}
+//.dashBoard .head{width:100%; height:48px;font-size:16px; line-height:48px; position:fixed; left:0; top:0; border-bottom: 1px solid #BBBBBB; text-align:center; background: #ffffff; z-index: 9999;opacity: 0.8;}
+//.dashBoard .head strong{font-size: 18px;}
+//.dashBoard .head .leftButton span{padding-left:8px; position: relative; }
+//.dashBoard .head .leftButton{ position:absolute; left: 5px;top:0;cursor:pointer; width:120px; text-align:left;}
+//.dashBoard .head .leftButton i{font-size: 26px; padding-top: 12px;}
+//.dashBoard .head .rightButton{ position:absolute; right: 5px; top:0; cursor:pointer;margin-top: 6px; text-align:right;}
+//.dashBoard .head .rightButton i{font-size: 26px; padding-top: 12px;padding-right: 6px;padding-left: 6px;}
+
+.dashBoard .head .leftIcon { position:absolute; left: 10px;top:15px; }
+.dashBoard .separator { height: 15px;  background-color: gainsboro;  border-top-width: 1px;  border-bottom-width: 1px;  border-color: rgba(128, 128, 128, 0.32);  border-top-style: solid;  border-bottom-style: solid;}
+.dashBoard .my_item { height: 70px;  line-height: 70px;  border-bottom-width: 1px;  border-bottom-style: solid;  border-bottom-color: rgba(128, 128, 128, 0.68); }
+.dashBoard .my_item img{ margin: 10px; }
+.dashBoard .my_item p{ font-size: 18px; }
+
+.dashBoard .loginBody{margin: 0; padding:95px 20px 80px 20px;overflow: hidden;text-align: right; background-color: #fff}
+.dashBoard .loginBody div{border:1px solid #ccc;border-radius:5px;text-align:left;overflow: hidden; margin-bottom: 10px;}
+.dashBoard .loginBody s{display: block; overflow: hidden; padding: 5px 0}
+.dashBoard .loginBody div label span{padding: 6px 12px;font-size: 24px;color:#ccc;font-weight: normal;line-height: 1;text-align: center;width: 1%;white-space: nowrap;vertical-align: middle;display: table-cell;}
+.dashBoard .loginBody div label{border-bottom: solid 1px #ccc;height:45px;margin-bottom: 3px;width:98%;margin-left: 3px;}
+.dashBoard .loginBody div label input{z-index: 2;float: left;width: 93%;height: 30px;padding: 2px 4px;font-size: 14px;line-height: 1.42857143;border: none;margin-top:5px;}
+.dashBoard .loginBody div label textarea{z-index: 2;float: left;width: 93%;height: 60px;padding: 2px 4px;font-size: 14px;line-height: 1.42857143;border: none;margin-top:5px;}
+.dashBoard .loginBody input[type=submit]{ margin-top: 10px; padding:8px 0;color:#fff;background-color: #03bb99; border: none;width:100%;font-size: 18px;margin-right: 2px;}
+.dashBoard .loginBody input[type=button]{ margin-top: 10px; padding:8px 0;color:#fff;background-color: #4BB0FE; border: none;width:100%;font-size: 18px;margin-right: 2px;}
+.dashBoard .loginBody input{border-radius: 3px;}
+.dashBoard .loginBody span{margin-right:5px;color:#9c9c9c;}
+.dashBoard .loginBody ol  {margin: 0; padding:10px 0 20px; list-style-type: none}
+.dashBoard .loginBody ol li{float: left;width:33%; text-align: left; font-size: 1em}
+.dashBoard .loginBody ol li:first-letter{font-size: 1.1em}
+.dashBoard .my_top {margin-top: 50px; padding:80px 10px 0 10px; height: 80px; line-height:20px; overflow: hidden; text-align: center; position: relative;}
+.dashBoard .my_top dl{margin: 0; padding:3px 0;line-height: 24px; overflow: hidden;color: #fff;text-shadow:2px 2px 2px #000, 0px 0px 10px #000, 0px 0px 20px #000}
+.dashBoard .my_top dt{float:left;width: 60%}
+.dashBoard .my_top dd{text-align: right; cursor: pointer}
+.dashBoard .my_top #my_face{position: absolute;left:50%; margin-left: -35px; margin-top: -60px; height: 70px;width:70px; border-radius:50%; overflow: hidden;box-shadow: 0 0 15px #fff, 0 0 3px #fff; border: 1px solid #ccc; background-color: #fff; text-align: center;}
+.dashBoard .my_top #my_face img{border: none;width:100%;border-radius:50%;}
+.dashBoard .my_top #my_face i{display: block; text-align: center; font-size:24px; color: #939f3e;padding:10px 0 0 0;}
+.dashBoard .my_top #my_face span{font-size:40px;line-height:70px;color: #000}
+.dashBoard .my_top #my_face img{border: none;width: 100%;height: 70px;border-radius: 50%;}
+.dashBoard .my_sign {width: 100%; overflow: hidden;position: absolute;left: 0;bottom:15px; color:#666;}
+//.dashBoard #btn_users{ position: fixed;top:60px; left: 5px;color: #fff;text-shadow:2px 2px 2px #000, 0px 0px 10px #000, 0px 0px 20px #000}
+//.dashBoard #btn_active{ position: fixed;top:100px; left: 5px;color: #fff;text-shadow:2px 2px 2px #000, 0px 0px 10px #000, 0px 0px 20px #000}
+.dashBoard .user_nav{width: 100%; height: 52px; border-top: 1px solid #959595;border-bottom: 4px solid #ccc;position: relative;background-color: #fff;}
+.dashBoard .my_btns,.dashBoard .my_pro {position: absolute;left: 50%; top:0px; margin-left: -100px; list-style-type: none; width:180px; }
+.dashBoard .my_btns li,.dashBoard .my_pro li{margin: 0 10px; float: left; line-height: 55px; height: 52px; text-align: center; border-bottom: 4px solid #ccc;font-size: 18px; color:#6E6E6E;}
+.dashBoard .my_btns li.on{border-bottom: 4px solid #148a8e;color:#148a8e}
+.dashBoard .my_pro  {width: 100%; overflow: hidden; background-color: #2781db;color:#fff}
+.dashBoard .my_pro li:first-letter{font-size: 16px;color: rgba(219, 205, 39, 0.66)}
+.dashBoard .actions {padding:10px 8px; margin: 0; list-style-type: none; overflow:hidden; border-top: 0px solid #959595;border-bottom: 4px solid #ccc}
+.dashBoard .actions li{float:left;width:50px; padding-top: 46px;height:26px; line-height:26px;margin-right:8px; background-size: 100%; cursor: pointer; text-align: center;background-position: top center; background-repeat:no-repeat; font-size: 0.8em}
+.dashBoard .actions li:hover{opacity: 0.8}
+.dashBoard .my_detailed{margin: 0; padding: 0;padding-top: 50px; overflow: hidden; background-color: #fff; border-top:1px solid #ccc}
+.dashBoard .my_detailed li{padding: 8px; line-height: 26px;border-bottom:1px solid #ccc}
+.dashBoard .my_detailed li:hover{background-color: #eee}
+.dashBoard .my_detailed li i{float: right; line-height: 26px; font-weight: normal;color: #999}
+.dashBoard .tabs_main{border-top: 1px solid #959595;}
+
+
+.shop_manager li{padding: 8px; line-height: 26px;border-bottom:1px solid #ccc}
+.shop_manager li:hover{background-color: #eee}
+.shop_manager li i{float: right; line-height: 26px; font-weight: normal;color: #999}
+
+
+.dashBoard .my_bg {margin-top: 50px; padding:150px 10px 0 10px; background-image: url(/home/7.jpg); background-position: center center; background-size: 100% auto; height: 30px;overflow: hidden; text-align: center}
+.dashBoard .my_bg div{position: absolute; height: 70px;width:70px;left: 50%; margin-left: -35px; border: 1px solid #ccc; border-radius: 35px; background-color: #fff; background-position: center center; background-size: 100% auto;box-shadow: 0 0 15px #fff, 0 0 3px #fff;color: #245fce}
+.dashBoard .my_bg div i{display: block; text-align: center; font-size:24px; color: #939f3e;padding:10px 0 0 0;}
+.dashBoard .my_bg div img{border: none;width: 100%;height: 70px;border-radius: 50%;}
+.dashBoard .my_bg span{font-size:40px;line-height:70px;color: #000}
+.dashBoard .min      {padding-bottom: 60px}
+.dashBoard .min li   {padding: 5px}
+.dashBoard .my_edit  {margin-top: 60px; margin-bottom: 10px; padding:5px; background-color: #fff; overflow: hidden}
+.dashBoard .my_edit input[type=text],.my_edit input[type=date]{width:100%;border: none; border-top: 1px solid #ccc;border-bottom: 1px solid #ccc}
+.dashBoard .my_edit select{width:100%; min-height: 350px; height: 80%;border: none; border-top: 1px solid #ccc;border-bottom: 1px solid #ccc; overflow-y:scroll}
+.dashBoard .my_edit select option{padding:5px 0}
+.dashBoard .my_edit ol   {margin: 0; padding: 0; padding-bottom: 50px; overflow: hidden}
+.dashBoard .my_edit ol li{padding:5px; background-position: right center; background-repeat:no-repeat; border-bottom: 1px solid #eee}
+.dashBoard .my_edit ol li:hover{background-color: #a3dbf4}
+.dashBoard .my_edit ol li.sel  {background-color: #ccc}
+.dashBoard .my_edit ol li i {float: right}
+
+.dashBoard .business_line{margin: 0; padding: 6px; padding-bottom: 20px; overflow: hidden}
+.dashBoard .business_line dt{line-height: 30px;width:100%; font-weight: normal}
+.dashBoard .business_line dd{width:60px; height: 60px; margin-right: 6px; float: left; background-repeat: no-repeat; background-size: 100% auto; margin-top: 6px}
+.dashBoard .business_line dd#add{width: 80px; border-radius: 4px; height: 28px; line-height:28px; background-color: #ccc; color:#333; text-align: center}
+.dashBoard .btn_save{margin:0 auto;width:96%;background-color: #148a8e; color:#fff; line-height: 40px; text-align: center;border-radius: 4px;}
+.dashBoard .btn_save:hover{background-color: #ff6c00}
+
+.dashBoard .my_photos{margin:0;padding-bottom:20px; list-style-type: none; overflow: hidden}
+.dashBoard .my_photos li{float: left;width:80px; height: 80px; margin-left:2%;margin-top:8px;overflow: hidden}
+.dashBoard .my_photos li img{border: none; width: 100%; height: 100%;}
+
+.users     {padding: 50px 0; overflow: hidden; }
+.users ol  {margin: 0; padding: 0px; line-height: 28px; overflow: hidden; list-style-type: none; background-color: #ccc; border-top: 1px solid #ccc}
+.users ol li{float: left;width:16%; text-align: center}
+.users ol li.on{background-color: #fff}
+.users dl  {margin: 0; padding:5px; overflow: hidden;line-height: 28px; border-bottom: 1px solid #ddd}
+.users dl.on{background-color: rgba(212, 79, 29, 0.83);color: #fff}
+.users dl:first-child{background-color: #bfccd8; border-top:1px solid #ccc }
+.users dl dt{margin: 0; padding: 0; float:left;width: 30%}
+.users dl dd{margin: 0; padding: 0; float:right;width: 14%; overflow: hidden; text-align: center; cursor: pointer}
+.users p    {display: block; margin: 0; padding: 5px; overflow: hidden}
+.users p input{margin: 0; padding:1%; border: 1px solid #ccc;width:97%}
+
+.swiper-container{width:100%; background-color: #000; padding:10px 0}
+.content-slide{padding:20px;color:#fff;}
+.swiper-slide img{border:none;width:100%}
+
+.auth-overlay{
+  margin: 0;padding: 0;border: 0px !important; margin-top: 10px; text-align: center !important;
+  .title{
+    height: 20px; display: block;color: #ccc; padding: 0 5px; padding-top: 5px; text-align: left !important;position: relative;padding-left: 165px;border: 0px !important;
+    .text{position: absolute;left:5px; top: 0;border: 0px !important;}
+    .line{height: 1px;background: #ccc;overflow: hidden;border: 0px !important; margin-top: 5px;}
+  }
+  button{
+    width: 100%;
+    i.fa{font-size: 14px !important;width: 25px !important; height: 25px !important; line-height: 25px !important;}
+  }
+  i.fa{
+    width: 55px; height: 55px; line-height: 55px; margin: 0px 5px; border-radius: 50%; text-align: center; display: inline-block;font-size: 30px;color: #fff;
+    position: relative; margin-bottom: 20px;
+    span{width: 55px; height: 20px; line-height: 20px; position: absolute; left: 0; bottom: -23px; display:block;text-align: center; font-size: 12px;}
+  }
+  i.fa.fa-weixin{background-color: #609700;}
+  i.fa.fa-qq{background: #1DC3F3;}
+  i.fa.fa-weibo{background: #E6162D;}
+  i.fa.fa-facebook-official {background: #4264a3;}
+}
+.version{text-align: center !important;border: 0px !important; margin-top: 20px; color: #ccc;}
+#my_face_nickname{position: absolute;  left: 0px;  margin-left: 0px;  padding-left: 0px;  text-align: left;}

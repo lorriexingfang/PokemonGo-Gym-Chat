@@ -1,0 +1,37 @@
+<template name="wifiPubwifiReply">
+  <div class="wifi-reply">
+    <div class="head">
+      <strong>{{titles.heading}}</strong>
+      <div id="btn_back" class="left-btn"><i class="fa fa-chevron-left"></i></div>      
+    </div>
+    <div class="wifi-wrap" style="padding: 0px 0px; margin-top: 47px; padding-top:11px;">
+      <div class="text" style="text-align: center;">
+        {{#if message}}<span style="display:inline-block; margin-bottom: 4px; color: #6E96B7; font-style: italic; float: left; margin-left: 10px;">@{{message}}</span>{{/if}}
+        <textarea id="my_edit_signature" placeholder="{{titles.placeholder}}" rows="4" style="width: 90%; position: relative; border: 1px solid #CCC; padding: 2px 10px; border-radius: 8px; background-color: #FFF;"></textarea>
+      </div>
+
+      <div style="margin-left: 10px; margin-top: 10px; display:none;">{{> public_upload_index}}</div>
+      <div class="buttons" style="margin-left: 12px; margin-right: 12px; 12px;margin-top: 35px;"><button type="button" class="btn btn-primary btn-block btn-lg btn-submit">{{titles.button}}</button></div>
+    </div>
+  </div>
+</template>
+
+<!-- <template name="wifiPubwifiReply">
+  <div class="dashBoard">
+    <div class="head">
+      <strong>{{titles.heading}}</strong>
+      <div id="btn_back" class="leftButton"><i class="fa fa-chevron-left"></i></div>
+    </div>
+    <div class="set-up">
+      <ul>
+        <li class="text">
+          {{#if message}}<span style="display:inline-block; margin-bottom: 2px; color: #6E96B7; font-style: italic;">@{{message}}</span>{{/if}}
+          <textarea type="text" style="border:1px solid #E2DFDF; border-radius:3px;" id="my_edit_signature" placeholder="{{titles.placeholder}}" rows="4" value=""></textarea>
+        </li>
+      </ul>
+      <div class="buttons"><button type="button" class="btn btn-primary btn-block btn-lg btn-submit">{{titles.button}}</button></div>
+    </div>
+    <div style="margin-left: 10px;">{{> public_upload_index}}</div>
+  </div>
+</template> -->
+

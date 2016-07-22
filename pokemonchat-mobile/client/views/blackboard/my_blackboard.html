@@ -1,0 +1,39 @@
+<template name="my_blackboard_main">
+    <ul class="ap-list" style="padding-top: 10px;">
+	    {{#each blackboards}}
+	        {{> my_blackboard_list}}
+	    {{/each}}
+    </ul>
+    {{#if has_more_data}}
+      <div id="load-more-wifihistory" class="up-load-more my-blackboard-loading">上拉加载更多...</div>
+    {{else}}
+      <div id="load-more-wifihistory" class="up-load-more">已显示全部</div>
+    {{/if}}  
+</template>
+<template name="my_blackboard_list">
+    <li class="my-blackboard-list-li">
+      	<div class="img">
+            <!--<img class="lazy" src="/lazy-loading-70.gif" data-original="{{getWifiPicture wifiID}}" />-->
+            {{#with getWifiPicture latestPicture}}
+              {{> wifiUserWifiShowImage data=this}}
+            {{/with}}
+            <div class="wifi-pic-desc" style="height: 48px;">
+              	<div class="wifi-pic-desc-bg" style="height: 48px;"></div>            
+              	<h1 style="bottom: 0px;">{{nike}}</h1>
+              	<h2 style="bottom: 0px;">名称:{{SSID}} 密码：{{trunc_str 12 passwd}}</h2>
+            </div>
+      	</div>
+      	<div class="text">
+      		<i class="fa fa-map-marker">{{gec _id location}}<strong>{{get_distance this}}</strong></i>
+        	<i class="fa fa-clock-o">{{time createTime}}</i>
+      	</div>
+      	<div class="btns">
+          	<span class="btn-tuya"><i class="fa fa-pencil-square-o"></i>点评</span>
+          	{{#if isFavorite}}
+          		<span class="btn-cancel-favorite"><i class="fa fa-heart"></i>取消收藏</span>
+          	{{else}}
+          		<span class="btn-add-favorite"><i class="fa fa-heart-o"></i>收藏</span>
+          	{{/if}}
+      	</div>
+    </li>
+</template>

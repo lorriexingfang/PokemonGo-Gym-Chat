@@ -1,0 +1,47 @@
+<template name="partner_activities">
+    <div id="partner_activities">
+        <div class="head">
+            <strong>最新活动</strong>
+            <div id="btn_back" class="leftButton"><i class="fa fa-chevron-left"></i></div>
+        </div>
+        <ul class="lists">
+            {{#if event_2015_01}}
+            <li class="event_2015-01">
+                {{> spinner_master}}
+                <img class="lazy2" data-original="/event/2015-01/activity_bg.jpg" width='100%'>
+                <tt>发搭伙消息，住免费客栈</tt>
+                <i>小店公告－结伴出游的最佳选择</i>
+            </li>
+            {{/if}}
+            {{#each lists}}
+            <li id="{{_id}}" class="lists_li">
+                {{> spinner_master}}
+                <img class="lazy2" data-original="{{images}}" width='100%'>
+                <tt>{{title}}</tt>
+                <i>{{subhead}}</i>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</template>
+
+<template name="activity_detail">
+	<div id="activity_detail">
+		<div class="head">
+            <strong>活动详情</strong>
+            <div id="btn_back" class="leftButton"><i class="fa fa-chevron-left"></i>
+            </div>
+<!--            <strong>{{activityDetail.title}}</strong>-->
+        </div>
+        {{> Template.dynamic template=content}}
+<!--
+		<div class="detail_img" id="{{activityDetail._id}}" style="background-image:url({{activityDetail.img}})"></div>
+		<div class="activities">
+			<dl class="title"><dt></dt>
+				<dd>活动详情</dd>
+			</dl>
+			<div class="detail_text" style="background-image:url({{activityDetail.detail}})"></div>
+		</div>
+-->
+	</div>
+</template>

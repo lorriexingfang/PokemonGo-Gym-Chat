@@ -1,0 +1,33 @@
+# Meteor packages used by this project, one per line.
+#
+# 'meteor add' and 'meteor remove' will edit this file for you,
+# but you can also edit it by hand.
+
+meteor-platform
+less
+nemo64:bootstrap
+accounts-base
+accounts-password
+accounts-ui
+fastclick
+servicelocale:geoip
+coffeescript
+meteorhacks:npm
+npm-container
+matb33:collection-hooks
+meteor-phonegap-push
+sacha:spin
+mdg:camera
+accounts-weibo
+service-configuration
+email
+oauth
+lepozepo:publish-with-relations
+aldeed:template-extension
+leonzhang1109:accounts-wechat
+leonzhang1109:accounts-qq
+meteorhacks:kadira
+reactive-var
+meteorhacks:search-source
+tap:i18n
+fortawesome:fontawesome

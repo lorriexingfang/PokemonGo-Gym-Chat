@@ -1,0 +1,57 @@
+.postDetail{
+  font-size: 16px; color: #716C68;
+  .post{
+    border: 1px solid #ccc; border-radius: 5px; padding: 10px;position: relative; background-color: #fff; 
+    .user{
+       min-height: 60px; padding-left: 70px;position:relative;
+      .photo{
+        width: 60px; height: 60px; position: absolute; left: 0px; top: 0px;
+        img{width: 60px; height: 60px; border-radius: 50%;}
+      }
+      .name{}
+      .address{
+        width: auto; background: #A0A0A5; color: #fff; padding: 1px 5px; border-radius: 5px;display: inline-block;
+        i{font-size: 14px;}
+      }
+    }
+    .other{ margin-top: 5px;}
+    .text{ margin-top: 10px; padding-top: 10px; border-top: 1px dotted #ccc;}
+    .image{
+      margin-top: 10px; margin-bottom: 10px;
+      img{width: 60px; height: 60px; margin-right: 10px; margin-bottom: 10px;}
+    }
+    .address{
+      i{font-size: 18px; padding-right: 5px;} 
+    }
+    .views{
+      margin-top: 5px;
+      img{width: 20px; height: 20px; border-radius: 50%; margin-right: 5px;}
+    }
+    .time{
+      color: #A4A4C1;
+      i{padding-right: 5px; color: #F2AE56;}
+    }
+    .reply_count{
+      position: absolute;right: 10px; bottom: 8px;
+    }
+  }
+  .reply{
+    border: 1px solid #ccc; border-radius: 5px; padding: 10px; margin-top: 10px; background-color: #fff;
+    .user{
+      min-height: 80px; padding-left: 80px; position: relative;border-top: 1px dotted #ccc; padding-bottom: 10px;
+      .photo{
+        width: 60px; height: 60px; position: absolute; left: 10px; top: 10px;
+        img{width: 60px; height: 60px; border-radius: 50%;}
+      }
+      .name{color: #01A58A; margin-top: 10px;}
+      .comment{
+        .replyTo{color: #FEA55E} 
+      }
+      .time{
+        margin-top: 5px; color: #989898;
+        i{padding-right: 5px; color: #EFA345;}
+      }
+    }
+    .user:first-child{border: 0; margin-top: -10px;}
+  }
+}

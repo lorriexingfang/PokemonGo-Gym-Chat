@@ -1,0 +1,10 @@
+<template name="plugInDialogConfirm">
+  <div class="plug-in-dialog-confirm">
+    <div class="text">{{text}}</div>
+    <div class="btns btn-{{length}}">
+      {{#each btns}}
+      <div class="my-btn">{{this}}</div>
+      {{/each}}
+    </div>
+  </div>
+</template>

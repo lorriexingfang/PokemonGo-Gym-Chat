@@ -1,0 +1,41 @@
+<template name="editor">
+    <div class="editor">
+        <textarea class="form-control" id="editor_textarea" name="comment" rows="4" placeholder="说点什么？" style="width:90%;"></textarea>
+        <div class="toolbar">
+            <i class="fa fa-photo"></i>
+            <!--<i class="fa fa-camera"></i>-->
+<!--            <i class="fa fa-smile-o"></i>-->
+            <!--<div style="float: right;">
+                <i class="fa fa-weibo disable"></i>
+                <i class="fa fa-tencent-weibo disable"></i>
+                <i class="fa fa-twitter disable"></i>
+            </div>-->
+        </div>
+        <div id="fileUpload_window" class="fileUpload_window">{{>fileUpload}}</div>
+<!--        <div id="emoji" class="emoji">{{> emoji}}</div>-->
+    </div>
+</template>
+
+<template name="emoji">
+    <div>
+        <div id="emoji_list">
+            <span class="emoji_icon" tag="😀">😀</span>
+            <span class="emoji_icon" tag="😁">😁</span>
+            <span class="emoji_icon" tag="😂">😂</span>
+            <span class="emoji_icon" tag="😃">😃</span>
+            <span class="emoji_icon" tag="😅">😅</span>
+            <span class="emoji_icon" tag="😇">😇</span>
+            <span class="emoji_icon" tag="😉">😉</span>
+            <span class="emoji_icon" tag="😊">😊</span>
+            <span class="emoji_icon" tag="😋">😋</span>
+            <span class="emoji_icon" tag="😌">😌</span>
+            <span class="emoji_icon" tag="😓">😓</span>
+            <span class="emoji_icon" tag="😕">😕</span>
+            <span class="emoji_icon" tag="😘">😘</span>
+            <span class="emoji_icon" tag="😜">😜</span>
+            <span class="emoji_icon" tag="☀">☀</span>
+            <span class="emoji_icon" tag="♥">♥</span>
+            <span class="emoji_icon" tag="⚡">⚡</span>
+        </div>
+    </div>
+</template>

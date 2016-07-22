@@ -1,0 +1,41 @@
+{
+  "builtBy": "meteor/14",
+  "buildDependencies": {
+    "os.json": {
+      "files": {
+        "/Users/weizuo/projects/familysnap/gerrit/traveller/meteor-traveller/packages/meteor-phonegap-push/package.js": "dafef505ae8685c70b1a9dc4c9c8b24124f36518",
+        "/Users/weizuo/projects/familysnap/gerrit/traveller/meteor-traveller/packages/meteor-phonegap-push/.npm/package/npm-shrinkwrap.json": "929bd6fe1989355e33cf65ee949dfcb3d7f62f23",
+        "/Users/weizuo/projects/familysnap/gerrit/traveller/meteor-traveller/packages/meteor-phonegap-push/android.server.js": "9fba1538e593b7ae8e9c54345933195ded18795a",
+        "/Users/weizuo/projects/familysnap/gerrit/traveller/meteor-traveller/packages/meteor-phonegap-push/ios.server.js": "6010053e1e958500de23ec8dc099495ee254ab99",
+        "/Users/weizuo/projects/familysnap/gerrit/traveller/meteor-traveller/packages/meteor-phonegap-push/push.server.js": "0ac4fc9f0f6356caef6a048015ddf7e547ea442c"
+      },
+      "directories": []
+    },
+    "web.browser.json": {
+      "files": {
+        "/Users/weizuo/projects/familysnap/gerrit/traveller/meteor-traveller/packages/meteor-phonegap-push/package.js": "dafef505ae8685c70b1a9dc4c9c8b24124f36518",
+        "/Users/weizuo/projects/familysnap/gerrit/traveller/meteor-traveller/packages/meteor-phonegap-push/.npm/package/npm-shrinkwrap.json": "929bd6fe1989355e33cf65ee949dfcb3d7f62f23"
+      },
+      "directories": []
+    },
+    "web.cordova.json": {
+      "files": {
+        "/Users/weizuo/projects/familysnap/gerrit/traveller/meteor-traveller/packages/meteor-phonegap-push/package.js": "dafef505ae8685c70b1a9dc4c9c8b24124f36518",
+        "/Users/weizuo/projects/familysnap/gerrit/traveller/meteor-traveller/packages/meteor-phonegap-push/.npm/package/npm-shrinkwrap.json": "929bd6fe1989355e33cf65ee949dfcb3d7f62f23"
+      },
+      "directories": []
+    }
+  },
+  "pluginDependencies": {
+    "files": {
+      "/Users/weizuo/projects/familysnap/gerrit/traveller/meteor-traveller/packages/meteor-phonegap-push/package.js": "dafef505ae8685c70b1a9dc4c9c8b24124f36518"
+    },
+    "directories": []
+  },
+  "source": "/Users/weizuo/projects/familysnap/gerrit/traveller/meteor-traveller/packages/meteor-phonegap-push",
+  "buildTimeDirectDependencies": {
+    "meteor": "1.1.3"
+  },
+  "buildTimePluginDependencies": {},
+  "cordovaDependencies": null
+}

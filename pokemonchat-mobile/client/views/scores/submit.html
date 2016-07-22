@@ -1,0 +1,50 @@
+<template name="scoresSubmitTips">
+  <div class="scores-submit-tips">
+    <div class="head">
+      <strong>消费积分</strong>
+      <div class="leftButton"><i class="fa fa-chevron-left"></i></div>
+    </div>
+    <div class="page">
+      <p>
+        消息积分：<br /><br />
+        1、下载APP<br />
+        2、在商家消费或其它商家提供的活动都可兑换消费积分。<br />
+        3、在线提交兑换消费积分的凭证，最终由商家确认后兑换相应的积分。
+      </p>
+      <button type="button" class="btn btn-success btn-lg btn-block">我要消费积分</button>
+    </div>
+  </div>
+</template>
+
+<template name="scoresSubmitForm">
+  <div class="scores-submit-form">
+    <div class="head">
+      <strong>消费积分</strong>
+      <div id="btn_back" class="leftButton"><i class="fa fa-chevron-left"></i></div>
+    </div>
+    <div class="page">
+      <form class="scores-submit-form">
+        <div class="form-item">
+          <select name="type" id="type">
+            <!--option value="download-app">下载APP兑换</option-->
+            <option value="consume">消费兑换</option>
+            <option value="other">其它兑换</option>
+          </select>
+        </div>
+        <div class="form-item">
+          <input type="tex" name="amount" id="amount" placeholder="消费金额（非消费时可不填）" onkeyup="this.value=this.value.replace(/[^0-9.]/g,'')" onblur="this.value=this.value.replace(/[^0-9.]/g,'')"/>
+        </div>
+        <div class="form-item">
+          <textarea name="remark" id="remark" placeholder="其它说明..."></textarea>
+        </div>
+        <div class="form-item">
+          {{> public_upload_index}}
+          <span class="tips">~亲，上传个收据呗~</span>
+        </div>
+        <div class="form-item">
+          <button type="button" class="btn btn-success btn-lg btn-block scores-submit-form-submit">确定提交</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</template>

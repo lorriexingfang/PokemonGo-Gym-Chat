@@ -1,0 +1,10 @@
+<template name="imagesView">
+  <div id="images_view_text">1/1</div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      {{#each images}}
+      <div class="swiper-slide"><a><img style="width:100%" src="{{this}}"></a></div>
+      {{/each}}
+    </div>
+  </div>
+</template>

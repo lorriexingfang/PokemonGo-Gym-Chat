@@ -1,0 +1,118 @@
+<template name="my_message">
+  <div class="my_message">
+    <div class="head">
+      <strong>{{_ "message"}}</strong>
+      {{#if manage}}
+      <button id="sendMessage" class="h-dh rightButton btn btn-default">{{_ "sendGroupMsg"}}</button>
+      {{/if}}
+    </div>
+    <div class="page">
+      {{> my_message_tmp_say_list}}
+    </div>
+  </div>
+</template>
+<template name="my_message_guest">
+  <div class="my_message">
+    <div class="head">
+      <strong>{{_ "message"}}</strong>
+    </div>
+    <div class="my_message_guest">
+      <i class="fa fa-comments-o"></i>
+      <div class="text">
+        {{_ "noMsgTip1"}}<br />
+        {{_ "noMsgTip2"}}
+      </div>
+    </div>
+  </div>
+</template>
+<template name="my_message_tmp_say_list">
+  <div class="message">
+    {{#if noData messageList}}
+      <div class="my_message_guest">
+        <i class="fa fa-comments-o"></i>
+        <div class="text">
+          {{_ "noMsgTip1"}}<br />
+          {{_ "noMsgTip3"}}
+        </div>
+      </div>
+    {{/if}}
+    <ul>
+      {{#each messageList}}
+        <li id="{{toUserId}}" tag="{{msgTypeEx}}" chatUserId="{{_id}}" wifiID="{{toUserId}}">
+          {{#if isBussiness msgTypeEx}}
+            <div class="head_pic business"><img src="{{toUserPicture}}" /></div>
+            <div class="username business">{{toUserName}}<span>[{{_ "businessUser"}}]</span></div>
+          {{else}}
+            {{#if isSystem msgTypeEx}}
+            <div class="head_pic business"><img src="{{toUserPicture}}" /></div>
+            <div class="username business">{{toUserName}}</div>
+            {{else}}
+            <div class="head_pic user"><img src="{{toUserPicture}}" /></div>
+            <div class="username">{{toUserName}}</div>
+            {{/if}}
+          {{/if}}
+          <div class="last_msg">{{lastText}}</div>
+          <div class="last_time">{{time_diff lastTime}}</div>
+          {{#if is_wait_msg waitReadCount}}
+            <div class="msg_count">{{waitReadCount}}</div>
+          {{/if}}
+        </li>
+      {{/each}}
+      <!--{{#each sayListsEx}}
+        <li id="{{toUserId}}" chatUserId="{{_id}}">
+          <div class="head_pic"><img src="{{toUserPicture}}" /></div>
+          <div class="username">{{toUserName}}</div>
+          <div class="last_msg">{{lastText}}</div>
+          <div class="last_time">{{time_diff lastTime}}</div>
+          {{#if is_wait_msg waitReadCount}}
+          <div class="msg_count">{{waitReadCount}}</div>
+          {{/if}}
+        </li>
+      {{/each}}
+      {{#each sayListsExEx}}
+        <li id="{{toUserId}}" tag="business" chatUserId="{{_id}}">
+          <div class="head_pic business"><img src="{{toUserPicture}}" /></div>
+          <div class="username business">{{toUserName}}<span>[商家]</span></div>
+          <div class="last_msg">{{lastText}}</div>
+          <div class="last_time">{{time_diff lastTime}}</div>
+          {{#if is_wait_msg waitReadCount}}
+          <div class="msg_count">{{waitReadCount}}</div>
+          {{/if}}
+        </li>
+      {{/each}}
+      {{#each sayLists}}
+        <li id="{{toUserId}}" chatUserId="{{_id}}">
+          <div class="head_pic user"><img src="{{toUserPicture}}" /></div>
+          <div class="username">{{toUserName}}</div>
+          <div class="last_msg">{{lastText}}</div>
+          <div class="last_time">{{time_diff lastTime}}</div>
+          {{#if is_wait_msg waitReadCount}}
+          <div class="msg_count">{{waitReadCount}}</div>
+          {{/if}}
+        </li>
+      {{/each}}-->
+    </ul>
+  </div>
+</template>
+<template name="myu_message_send_group_message">
+  <div class="my_message">
+    <div class="head">
+      <strong>{{_ "sendGroupMsg"}}</strong>
+      <div class="leftButton button_left"><i class="fa fa-chevron-left"></i></div>
+    </div>
+    <div class="page">
+      <form id="send_group_message_form" role="form" class="send_group_message_form">
+        <select id="target" name="target" style="width:85%;margin: 15px 0 0 15px;">
+          <option value="">=={{_ "msgTarget"}}==</option>
+          <option value="AllUser">游喳会员</option>
+          <option value="Android">所有Android设备（含注册/未注册游喳会员）</option>
+          <option value="iOS">所有iOS设备（含注册/未注册游喳会员）</option>
+        </select><br />
+        <textarea class="form-control" id="comment" name="comment" rows="4" placeholder="要群发的内容，请谨慎操作." style="width:85%;margin: 0px 0 0 15px;"></textarea>
+        <textarea class="form-control" id="parameters" name="parameters" rows="4" placeholder="消息参数，用于定位到具体的页面" style="width:85%;margin: 0px 0 0 15px;"></textarea>
+        <button class="btn btn-default" style="margin-left: 15px;">{{_ "sengMsg"}}</button>
+        &nbsp;&nbsp;<input type="checkbox" id="isTest" name="isTest" />测试信息？（只发给测试人员）
+      </form>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,9 @@
+<template name="shop_summary">
+    <div class="summary">
+        <div class="item make"><label>地址：</label>{{shop.profile.address}}
+            <i class="fa map fa-map-marker"></i>
+        </div>
+        <div class="item"><label>电话：</label><a href="tel:{{shop.profile.tel}}">{{shop.profile.tel}}<i class="fa fa-phone"></i></a></div>
+        <div class="item"><label>商户简介：</label>{{shop.profile.text}}</div>
+    </div>
+</template>

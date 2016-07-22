@@ -1,0 +1,28 @@
+/*
+.loadingPhoto{position:relative;right:70px;z-index:-1}
+#chat {position: absolute; width: 100%; height: 100%;}
+#chat .home{position: absolute;}
+#chat .message-box{position:relative; overflow:hidden; top: 54px; width:100%; height:calc(100% - 102px)}
+#chat .message-box #remark {overflow-y: scroll; overflow-x: hidden; -webkit-overflow-scrolling: touch; position: absolute; height: 100%; width: calc(100% - 20px); padding-left: 10px; padding-right: 10px;}
+#chat .message-box #remark .down-load-more{width: 100%; height: 35px; line-height: 25px; display: block; padding-bottom: 10px; text-align: center;}
+*/
+/*#chat .home{padding-bottom: 0;}
+.loadingPhoto{position:relative;right:70px;z-index:-1}
+#chat #remark {overflow-y: scroll; overflow-x: hidden; -webkit-overflow-scrolling: touch; position: absolute; height: 100%; width: calc(100% - 20px); padding-left: 10px; padding-right: 10px; padding-bottom: 54px;}
+#chat #remark .down-load-more{width: 100%; height: 35px; line-height: 25px; display: block; padding-bottom: 10px; text-align: center;}
+#chat #remark .chat-dashboard-blank{width: 100%; height: 54px; display: block;}
+#chat #blackboard{padding-top: 0; padding-bottom: 54px;}
+*/
+#chat .home {padding-bottom: 48px;}
+#chat .home .head strong span{font-size: 10px; color: #fff; margin-left: 5px; font-weight: normal;}
+#chat .message-box{overflow-y: scroll; overflow-x: hidden; -webkit-overflow-scrolling: touch; position: absolute; height: 100%; width: 100%; top: 0; left: 0; padding-left: 10px; padding-right: 10px; display: block; -webkit-transform: translate3d(0, 0, 0);}
+/*#chat .message-box{padding-left: 10px; padding-right: 10px; display: block;}*/
+#chat .message-box #remark {padding-top: 54px; padding-bottom: 54px; /*height: 100%; width: 100%;*/}
+#chat .message-box #remark .down-load-more{width: 100%; height: 35px; line-height: 25px; display: block; padding-bottom: 10px; text-align: center;}
+
+.message-box .remark .upload .comment{}
+.message-box .remark .upload .comment .upload-bar{position: relative;}
+.message-box .remark .upload .comment .upload-bar .chatimg{}
+.message-box .remark .upload .comment .upload-bar .mask{position: absolute;left: 0; top: 0; right: 0; bottom: 0; opacity: 0.2; background-color: #000;}
+.message-box .remark .upload .comment .upload-bar .tips{width: 60px; height: 40px; position: absolute; left: 50%; top: 50%; margin-left: -30px; margin-top: -20px; color: #fff;text-align: center;}
+.message-box .remark .upload .comment .upload-bar .tips i{display: inline-block; width: 100%; text-align: center;}

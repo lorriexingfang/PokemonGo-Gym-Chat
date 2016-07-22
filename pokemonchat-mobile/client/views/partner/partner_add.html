@@ -1,0 +1,38 @@
+<!--bishen-->
+<template name="add_partner">
+    <div id="partners">
+		<div class="head">
+			<strong>发搭伙</strong>
+            <div id="btn_back" class="leftButton"><i class="fa fa-chevron-left"></i></div>
+			<button id="save" class="h-dh rightButton btn btn-default">完成</button>
+		</div>
+        <div class="add_partner">
+            <!-- <dl>
+                <dt><i class="fa fa-exchange"></i>旅游线路</dt>
+                <dd><input id="title" type="text" value="{{titleval}}" maxlength="20" placeholder="多个目的地请用空隔分开"></dd>
+            </dl> -->
+            <dl style="border: 0px;">
+                <dt><i class="fa fa-clock-o"></i>出发时间</dt>
+                <dd><input id="date" type="date" value="{{dateval}}" style="min-width:100px;border: solid 1px #cccccc;"></dd>
+            </dl>
+            <dl style="border: 0px;">
+                <dt><i class="fa fa-map-marker"></i>{{city}}</dt>
+            </dl>
+            <!-- <dl>
+                <dt><i class="fa fa-calendar"></i>旅游天数</dt>
+                <dd><input id="days" type="number" value="{{daysval}}"></dd>
+            </dl> -->
+            <!-- <dl>
+                <dt><i class="fa fa-star"></i>入驻商户</dt>
+                <dd><button shopName="{{shopName}}" shopId="{{shopId}}" class="shop btn btn-default">{{shopName}}</button></dd>
+            </dl> -->
+            {{#if showAdmin currentUser.profile.isAdmin}}
+            <div><input id="admin_location" type="text" maxlength="20" value="{{city}}"></div>
+            {{/if}}
+            <p>
+            	<textarea id="intro" placeholder="想去哪？说几句吧..." maxlength="150" value="{{introval}}"></textarea>
+            </p>
+            {{> public_upload_index}}
+        </div>
+    </div>
+</template>

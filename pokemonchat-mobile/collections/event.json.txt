@@ -1,0 +1,39 @@
+// 定期/计划的活动，如：报名、抢票等。
+{
+  title: String         // 标题
+  subhead: String       // 副标题
+  eventNo: String       // 活动期数，如：2015-01
+  describe: String      // 描述
+  startDate: Date       // 开始时间，如：2014-12-01 08:00:00
+  endDate: Date         // 截止时间
+  eachType: String      // 周期类型：day(每天)/week(每周)/month(每月)，注每周从星期日(0)开始算起
+  maxQuota: Integer     // 总数量，<= 0 表示不限制
+  eachQuota: Integer    // 每周期的数量，<= 0 表示不限制
+  eachFilter: [Integer] // 每周期的有效过滤(week/month时有效)，如：[]/[0,1,2,3,4,5,6]/[1,3,4,5,31]，表示不过滤/星期/日期
+  isSendSms: Boolean    // 是否发送短信
+  isSendMsg: Boolean    // 是否发送消息
+  
+  range: [{             // 时间范围，可为[]表示无限制
+    start: String       // 开始时间，如：10:00:00
+    end: String         // 结束时间，如：10:30:00
+  }]
+  
+  message: {            // 消息模板
+    successMsg: String  // 成功消息
+    failMsg: String     // 失败消息
+    successSms: String  // 成功短信
+    failSms: String     // 失败短信
+  }
+  
+  users: [{             // 活动用户
+    id: String          // 用户ID
+    nike: String        // 用户昵称
+    headimg: String     // 用户头像
+    enterDate: Date     // 报名/参加时间
+    status: String      // 状态：success/fail/wait
+    isSendSms: Boolean  // 是否已发送短信
+    isSnedMsg: Boolean  // 是否已发送消息
+    update: Date        // 最后更新时间
+    ticketCode: String  // 凭证编码
+  }]
+}

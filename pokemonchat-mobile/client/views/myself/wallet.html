@@ -1,0 +1,46 @@
+<template name="my_wallet">
+  <div class="myself-wallet">
+    <div class="head">
+      <strong>我的钱包</strong>
+      <div class="leftButton button_left"><i class="fa fa-chevron-left"></i></div>
+    </div>
+    <div class="page">
+      <ul class="tags">
+        {{#if isTemplate 'my_wallet_effective'}}
+        <li id="my_wallet_effective" class="hover">可使用</li>
+        {{else}}
+        <li id="my_wallet_effective">可使用</li>
+        {{/if}}
+        {{#if isTemplate 'my_wallet_expired'}}
+        <li id="my_wallet_expired" class="hover">已过期</li>
+        {{else}}
+        <li id="my_wallet_expired">已过期</li>
+        {{/if}}
+        <div class="clear"></div>
+      </ul>
+      <div class="box">
+        {{> Template.dynamic template=template}}
+      </div>
+    </div>
+  </div>
+</template>
+
+<template name="my_wallet_effective">
+  <ul class="wallet-list">
+    {{#each wallet}}
+    <li>
+      <div class="photo"><img src="{{photoPath}}" style="width:100%; height:300px; object-fit: cover;"/></div>
+      <div class="title">小店优惠到啦，点击查看详情</div>
+      <div class="shop-name"><i class="fa fa-circle-o"></i>来自商家：{{userName}}<!--<span class="timer"><i class="fa fa-clock-o"></i>2016-01-25 ~ 2016-01-29</span>--></div>
+    </li>
+    {{/each}} 
+  </ul>
+  {{#if hasMoreData}}
+  <div class="load-data">下拉加载更多</div>
+  {{else}}
+  <div class="load-data">已显示全部数据</div>
+  {{/if}}
+</template>
+<template name="my_wallet_expired">
+
+</template>

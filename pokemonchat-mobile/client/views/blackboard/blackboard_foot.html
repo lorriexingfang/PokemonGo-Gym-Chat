@@ -1,0 +1,50 @@
+<template name="blackboard_footbar">
+    <div class="footbar" id="footbar">
+        {{> Template.dynamic template=footbar_view}}
+    </div>
+</template>
+
+<template name="blackboard_footbar_reply">
+    <form class="new-reply" id="new-reply" name="new-reply">
+        <table>
+            <tr>
+                <td style="width:45px;text-align:left;">
+                    <i class="fa fa-arrow-circle-o-left back" style="font-size:44px;color:#20A59C;"></i>
+                </td>
+                <td>
+                    <div class="say_guide">说点什么</div>
+                    <!--<input class="text" type="text" name="comment" id="comment" placeholder="说点什么" style="width:90%" />-->
+                </td>
+<!--
+                <td style="width: 73px;text-align:right;">
+                    <button type="button" class="submit btn btn-warning">发送</button>
+                </td>
+-->
+            </tr>
+        </table>
+    </form>
+</template>
+
+<template name="blackboard_footbar_nav">
+    <div class="buttons">
+        {{#if is_show_join}}
+        <ul>
+            {{> partner_footbar_to_join}}
+            <li id="to_reply"><div><i class="fa fa-comment"></i>评论</div></li>
+            <li id="to_chat"><div><i class="fa fa-comments"></i>搭话</div></li>
+            <div class="clear"></div>
+        </ul>
+        {{else}}
+        <ul>
+            {{#if is_click_good}}
+            <li id="to_good"><div><i class="fa fa-heart-o"></i>点赞</div></li>
+            {{else}}
+            <li id="to_good"><div><i class="fa fa-heart"></i>取消</div></li>
+            {{/if}}
+            <li id="to_reply"><div><i class="fa fa-comment"></i>评论</div></li>
+            <li id="to_chat"><div><i class="fa fa-comments"></i>搭话</div></li>
+            <div class="clear"></div>
+        </ul>
+        {{/if}}
+    </div>
+</template>
