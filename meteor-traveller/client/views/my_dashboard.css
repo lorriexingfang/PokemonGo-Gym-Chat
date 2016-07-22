@@ -1,7 +1,0 @@
-.my_dashboard {background-color: #efefef}
-.my_dashboard .head{height: 48px;line-height: 48px;border-bottom: 1px solid #BBB;text-align: center; background-color: #fff}
-.my_dashboard .head strong{font-size: 18px;}
-.my_dashboard .head i{position: absolute;left:10px; margin-top: 5px; font-size: 1.5em; cursor: pointer}
-.my_dashboard .head button{position: absolute; right: 10px; margin-top: 4px;border-radius: 5px; border: 1px solid #ccc; background-color: transparent; line-height: 20px; font-size: 1em}
-.my_dashboard .main {padding:40px 8px; text-align: center}
-.my_dashboard .main .btn{ margin: 10px 0;width:100%; background-color: rgba(30, 128, 132, 0.67);color:#fff}

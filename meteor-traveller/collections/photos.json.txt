@@ -1,8 +1,0 @@
-// 需要新的字段请在这里继续增加并明
-photos{
-	_id: 
-	userId: 
-    createAt:
-	postId: 
-    imageUrl: 图片位置	
-}
