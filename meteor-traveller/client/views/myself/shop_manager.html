@@ -1,0 +1,90 @@
+<template name="shop_manager">
+  <div id="partner_activities" class="notes">
+    <div class="head">
+        <strong>商家管理</strong>
+        <div class="leftButton button_left"><i class="fa fa-chevron-left"></i></div>      
+        <!-- <button class="rightButton btn btn-default">button</button> -->
+    </div>
+    <ul class="shop_manager">
+        <li  >
+            当前在线人数：{{online}}人
+        </li>
+        <li >
+            累计到店人次：{{total}}人次
+        </li>
+        <li >
+            今日签到人数：{{dayCount}}人
+        </li>
+        <li >
+            累计签到人数：{{totalCount}}人
+        </li>
+        <div class="full_length func_icons">
+            <table class="full_length txt_horizontal_center">
+                <tr>
+                    <td id="adv_mgt"><img src="my/adv_mgt.png"><br/><strong>文章管理</strong></td>
+                    <td id="wifi_mgt"><img src="my/wifi_mgt.png"><br/><strong>WIFI管理</strong></td>
+                    <td id="group_mgt"><img src="my/group_mgt.png"><br/><strong>群发管理</strong></td>
+                </tr>
+                <tr>
+                    <td id="cur_clients"><img src="my/cur_clients.png"><br/><strong>在店顾客</strong></td>
+                    <td id="history_clients"><img src="my/history_clients.png"><br/><strong>历史顾客</strong></td>
+                    <td id="ztt_manager"><img src="my/icon_ztt.png"><br/><strong>招贴画管理</strong></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+        
+    </ul>
+  </div>
+</template>
+
+<template name="shop_manager_banner">
+  <div class="head">
+      <strong>招贴画管理</strong>
+      <div class="leftButton button_left"><i class="fa fa-chevron-left"></i></div>    
+      <div class="right-btn"><i class="fa fa-plus-circle"></i>增加</div>
+  </div>
+  <div class="shop-manager-banner">
+    <div class="tips"><i class="fa fa-exclamation-circle"></i>什么是招贴画？</div>
+    <ul>
+      {{#each banners}}
+        {{> shop_manager_banner_item}}
+      {{/each}}
+    </ul>
+  </div>
+</template>
+
+<template name="shop_manager_banner_item">
+  <li>
+    <div class="img"><img src="{{src}}" /></div>
+    <div class="buttons">
+      {{#if is_one}}
+      
+      {{else}}
+        {{#if is_first src}}
+          <i class="fa fa-arrow-down"></i>
+        {{else}}
+          {{#if is_last src}}
+            <i class="fa fa-arrow-up"></i>
+          {{else}}
+            <i class="fa fa-arrow-down"></i>
+            <i class="fa fa-arrow-up"></i>
+          {{/if}}
+        {{/if}}
+      {{/if}}
+      <i class="fa fa-pencil-square-o"></i>
+      <i class="fa fa-trash-o"></i>
+    </div>
+  </li>
+</template>
+
+<template name="shop_manager_banner_tip">
+  <div class="head">
+      <strong>什么是招贴画？</strong>
+      <div class="leftButton button_left"><i class="fa fa-chevron-left"></i></div>
+  </div>
+  <div class="shop-manager-banner-tip">
+    <span>招贴画：在“发现” -> “商家” -> 的顶部轮播图，最多显示5张。如果没有招贴画则会显示商家的文章图片。</span>
+    <img src="/hint/hint_01.jpg" />
+  </div>
+</template>

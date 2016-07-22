@@ -1,0 +1,182 @@
+{
+  //dashboard.html
+  "logIn": "Log in",
+  "signUp": "Sign up",
+  "userName": "Username",
+  "passWord": "Password",
+  "anony": "Anonymous",
+  "loginWithWeChat": "Log in with WeChat",
+  "forgotPassWord": "Forgot your password?",
+  "findPass": "Reset Password",
+  "oAuthLogIn": "Login with ",
+  "knowIt": "Confirm",
+  "tips": "Tips",
+  "iAgree":"I Agree",
+  "serviceNote": "Pokegym Go Service",
+  
+  // main
+  "shop": "Gyms",
+  "message": "Message",
+  "mySelf": "Me",
+  "back": "Back",
+  "edit": "Edit",
+  "undo": "Undo",
+  "save": "Save",
+  "add": "Add",
+  "send": "Send",
+  "sending": "Sending...",
+  "ok": "Ok",
+  "change": "Modify",
+  "submitChange": "Confirm modification",
+  "delete": "Delete",
+  
+  // tips
+  "enterRegEmail": "Please enter your registered email address",
+  "enterUseEmail": "Please enter the commonly used e-mail",
+  "enterPass": "Please enter a password",
+  "passAgain": "Enter the password again",
+  "upToShowMore": "Pull up load more...",
+  "downToShowMore": "Pull down load more...",
+  "isLoading": "Loading...",
+  "hasAll": "No More",
+  "positioning": "positioning",
+  "visitor": "visited",
+  "enterNike": "Enter Nike",
+  "editSignature": "Edit Signature",
+  "selectBirthday": "Select Your Birthday",
+  "getWifiInfo": "Getting Current WiFi Information...",
+  "welcomeTo": "Welcome to the Pokegym Go",
+  "welcomeTip": "Connect to a WiFi, join the Pokegym Go",
+  "saySomething": "Say Something.",
+  "addWifiTip": "The current WiFi has not been created in Pokegym Go yet. Add it in!",
+  
+  // my_message.html
+  "noMsgTip1": "There is nothing here yet.",
+  "noMsgTip2": "Get the Bouns, start chatting right away",
+  "noMsgTip3": "Go to the Gym to see it.",
+  "businessUser": "Business",
+  "sendGroupMsg": "Group Message",
+  "msgTarget": "Send to",
+  "sengMsg": "Confirm",
+  
+  //  userInfo
+  "editUserPic": "Profile Image",
+  "nike": "Nickname",
+  "wallet": "Wallet",
+  "signature": "Signature",
+  "language": "Language",
+  "Chinese": "中文",
+  "English": "English",
+  "about": "About",
+  "logOut": "Logout",
+  "sex": "Gender",
+  "man": "Male",
+  "women": "Female",
+  "birthday": "Birthday",
+  "selectProvince": "Select Provience",
+  "selectCity": "Select City",
+  "city": "City",
+  "userManager": "User Manager",
+  "activityManager": "Activity Manager",
+  
+  // userwifi.html
+  "wifiName": "WiFi",
+  
+  // 小店
+  "myShop": "My Gym",
+  "comments": "Comments",
+  "fav": "Favorites",
+  "unfav": "Dislike",
+  "theShop": "Shop",
+  "changePoints": "Points",
+  "points": "Points",
+  "writeComments": "Post",
+  "notice": "Notice",
+  "visitorCircle": "Visitors",
+  "viewMorePoints": "Click to see more.",
+  "replay": "Reply",
+  "newReplay": "New replies",
+  "wifiAP": "AP",
+  "distance": "Distance",
+  "addSuperAP": "Add SuperAP",
+  "noUsefulAP": "Unfortunately, there is no AP available!",
+  "APname": "WiFi Name",
+  "APpass": "WiFi Password",
+  "APnoPass": "No Password",
+  "scoreType": "Type",
+  "scoreAmount": "Account",
+  "scoreRemark": "Remark",
+  // report.html
+  "shopNotice": "Notice",
+  "shopNOticeTip": "Add more photos here?",
+  // pubwifi_passwd.html
+  "wifiPass": "Password",
+  // pubwifi_hint.html
+  "commentTip": "Click right to write a comment",
+  "pointTip": "Click left to upload the receipt and win coupons",
+  // pubwifi_address.html
+  "shopAddress": "Shop Address",
+  
+  
+  // chat.html
+  "chatTip": "Start chatting with It!",
+  
+  // 扩展菜单
+  "shareOnMoments": "Share to Moments",
+  "shareToFriends": "Share to WeChat",
+  "shareMore": "More Shares",
+  "favShop": "Like this gym",
+  "unFavShop": "Do not like this Gym",
+  "report": "Report",
+  "delShop": "Delete this gym",
+  "modWifi": "Change gym WiFi Password",
+  "modAddress": "Change this gym address",
+  
+  // menu.html
+  "Current": "Current",
+  "All": "Nearby",
+  "Favorite": "Favorite",
+   
+  // lte_guide.html
+  "lteGuide1":"You are using your data now.",
+  "lteGuide2":"You are not connecting to any WiFi",
+  "lteGuide3":"You can see current gym in all Gyms",
+  "lteGuide4":"Check it out!",
+  "lteGuide5":"What is the Pokegym Go?",
+  "lteGuide6":"Go!",
+  "lteGuide7":"Connect to WiFi and launch app, you can create a online gym.",
+  
+  // guide.html
+  "guide1": "Current WiFi",
+  "guide2": "Has not been created",
+  "guide3": "Here is to create!",
+  "guide4": "What is the Pokegym Go?",
+  "guide5": "What is the Pokegym Go? Connect to WiFi and launch app, you can create a online gym.",
+  
+  // add_wifi.html
+  "addShop": "Add a gym",
+  "shopName": "Gym",
+  "addShopTip1": "No password is needed.",
+  "addShopTip2": "Leave the first footprints in your gym!",
+   
+  // Share 
+  "shareWeChat": "WeChat",
+  "shareWeChatFriends": "Monents",
+  "shareWeChatFav": "WeChat Fav",
+  "shareQQ": "QQ",
+  "shareQzone": "Qzone",
+  "shareWeibo": "Weibo",
+  
+  // 消费积分
+  "usePoints": "Bonus",
+  "wantUsePoints": "I want to get bonus!",
+  "changeWithApp": "Download App",
+  "changeToUse": "Consumer Exchange",
+  "changeWithOther": "Other Exchange",
+  "changeAccount": "Consumption Amount(not to be filled)",
+  "changeRemark": "Other Remark...",
+  "submitPointChange": "Determine submit",
+  "changePointTip1":"Download APP can get consumption points",
+  "changePointTip2":"The activities that are offered by the merchant or other businesses can be exchanged for a message.",
+  "changePointTip3":"Online submission of the certificate of exchange consumption points, and ultimately to the business after the exchange of the corresponding points"
+}

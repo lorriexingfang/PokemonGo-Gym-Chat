@@ -1,0 +1,14 @@
+<template name="public_upload_index">
+  <div class="public_upload_index">
+    <ul>
+      {{#each images}}
+      <li class="img"><img src="{{url}}" /><div class="delete"></div></li>
+      {{/each}}
+      <li class="camera" style="line-height:0; border: none; height: 82px; width: 82px;"><img src="camera-icon.png" alt="{{_ 'photoUpload'}}"/></li>
+      <li class="add" style="line-height:0; border: none; height: 82px; width: 82px;"><img src="plus-icon.png" alt="{{_ 'localUpload'}}"/></li>
+<!--       <li class="camera"><i class="fa fa-camera"></i>拍照上传</li>
+<li class="add"><i class="fa fa-plus"></i>本地上传</li> -->
+      <div class="clear"></div>
+    </ul>
+  </div>
+</template>

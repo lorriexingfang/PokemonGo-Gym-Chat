@@ -1,0 +1,168 @@
+<template name="dashboard">
+</template>
+
+<template name="login_ing">
+  {{#if loggingIn}}
+    <div class="my_message">
+      <div class="head">
+        <strong>{{_ "mySelf"}}</strong>
+      </div>
+      <div class="my_message_guest">
+        <img src='/loggingIn.png' />
+      </div>
+    </div>
+  {{else}}
+    {{> my_info}}
+  {{/if}}
+</template>
+
+<template name="login">
+  <style type="text/css">
+    .head .rightButton{
+      background-color: #374A53;
+    }
+
+    .dashBoard .loginBody {
+      padding: 48px 0 0 0;
+    }
+
+    .loginBody .login-box {
+      display: block;
+      margin-right: 0;
+    }
+
+    .loginBody .login-box > div{
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px solid #EFEFF4;
+    }
+
+    .dashBoard .loginBody > span {
+      margin-right: 0;
+    }
+
+    .loginBody .login-box > div label.input-group {
+      width: 100%;
+      margin: 0;
+      height: 65px;
+      border-bottom: 1px solid #EFEFF4;
+    }
+
+    .loginBody .login-box > div label.input-group > input {
+      height: 65px;
+      line-height: 65px;
+    }
+
+    .loginBody .login-box #sub-login, .loginBody .login-box #anony-login {
+      display: block;
+      height: 45px;
+      width: 205px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 7px;
+      border: #EFEFF4;
+      font-size: 14px;
+      color: #FFF;
+    }
+
+    .loginBody .login-box #sub-login {
+      margin-top: 52px;
+      background-color: #374A53;
+    }
+
+    .loginBody .login-box #anony-login {
+      background-color: #566F7A;
+    }
+
+    .loginBody .login-box #forgotPWD {
+      display: block;
+      width: 205px;
+      margin-top: 17px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .loginBody .anonymous-box > div{
+      border: none;
+    }
+
+    .loginBody .anonymous-box #anony-login-ok {
+      margin-top: 52px;
+      width: 205px;
+      height: 45px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 7px;
+    }
+  </style>
+	<div class="dashBoard">
+		<div class="head">
+			<strong>{{_ "logIn"}}</strong>
+			<button id="btn_registered" class="h-dh rightButton btn btn-default">{{_ "signUp"}}</button>
+		</div>
+    <form class="loginBody" id="form-login">
+        <span class="anonymous-box" style="display:none;">
+          <div style="padding:10px;">
+            <span>{{_ "tips"}}:<br /><br /></span>
+            <span class="reg-main">
+              1、匿名账户的数据在程序卸载后可能会无法继续使用，如需永久保存数据，请注册或登录使用。<br />
+              2、匿名使用表示已经同意&nbsp;&nbsp;<strong class="reg-tips">小店公告服务告知</strong>。
+            </span>
+          </div>
+          <input type="button" value="{{_ 'knowIt'}}" id="anony-login-ok">
+        </span>
+        <span class="login-box">
+          <div>
+              <label class="input-group">
+                  <span><i class="fa fa-envelope-o" style="width: 1.28571429em;"></i></span>
+                  <input type="text" id="name" placeholder="{{_ 'enterRegEmail'}}">
+              </label>
+              <label class="input-group" style="border:0px;margin-bottom:0px;">
+                <span><i class="fa fa-key fa-fw"></i></span>
+                <input type="password" id="pass" placeholder="{{_ 'enterPass'}}">
+              </label>
+          </div>
+          <input type="submit" value="{{_ 'logIn'}}" id="sub-login">
+          <input type="button" value="{{_ 'anony'}}" id="anony-login">
+          <span id="forgotPWD">{{_ "forgotPassWord"}}？</span>
+          <div class="auth-overlay">
+            {{#if is_android}}
+            <div class="title">
+              <div class="text">{{_ "oAuthLogIn"}}</div>
+              <div class="line"></div>
+            </div>
+            <i class="fa fa-weixin loginWithWeixin"><span>{{_ "loginWithWeChat"}}</span></i>
+  <!--          <i class="fa fa-weibo"><span>微博登录</span></i>-->
+  <!--          <i class="fa fa-qq"><span>QQ登录</span></i>-->
+            {{/if}}
+            <!--{{#if isFacebookInstalled}}-->
+            <i class="fa fa-facebook-official fbLogIn"><span>Facebook</span></i>
+            <!--{{/if}}-->
+          </div>
+          <div class="version">
+            v1.0.14
+          </div>
+        </span>
+    </form>
+	</div>
+</template>
+
+<template name="sendRestPWD">
+    <div class="dashBoard">
+        <div class="head">
+            <div id="btn_back" class="leftButton"><i class="fa fa-chevron-left"></i></div>
+            <strong>{{_ "forgotPassWord"}}</strong>
+            <button id="btn_login" class="h-dh rightButton btn btn-default">{{_ "logIn"}}</button>
+        </div>
+    <form class="loginBody" id="form-forgot">
+        <div>
+            <label class="input-group" style='border-bottom:solid 1px #fff'>
+                <span><i class="fa fa-envelope-o" style="width: 1.28571429em;"></i></span>
+                <input type="text" id="email" placeholder="{{_ 'enterRegEmail'}}">
+            </label>
+        </div>
+        <input type="submit" value="{{_ 'findPass'}}" id="sub-forgot">
+    </form>
+    </div>
+</template>

@@ -1,0 +1,415 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"Console\"><param name=\"ios-package\" value=\"CDVLogger\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"File\"><param name=\"ios-package\" value=\"CDVFile\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FileTransfer\"><param name=\"ios-package\" value=\"CDVFileTransfer\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"InAppBrowser\"><param name=\"ios-package\" value=\"CDVInAppBrowser\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Camera\"><param name=\"ios-package\" value=\"CDVCamera\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"CameraUsesGeolocation\" value=\"false\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"CordovaUpdate\"><param name=\"ios-package\" value=\"CordovaUpdate\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"StatusBar\"><param name=\"ios-package\" value=\"CDVStatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"StatusBarOverlaysWebView\" value=\"true\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"StatusBarStyle\" value=\"lightcontent\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Keyboard\"><param name=\"ios-package\" onload=\"true\" value=\"IonicKeyboard\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Keyboard\"><param name=\"ios-package\" onload=\"true\" value=\"CDVKeyboard\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Geolocation\"><param name=\"ios-package\" value=\"CDVLocation\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Notification\"><param name=\"ios-package\" value=\"CDVNotification\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"PushPlugin\"><param name=\"ios-package\" value=\"PushPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"JPushPlugin\"><param name=\"ios-package\" value=\"JPushPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"FileTransferBCS\"><param name=\"ios-package\" value=\"CDVFileTransferBCS\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Toast\"><param name=\"ios-package\" value=\"Toast\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Accelerometer\"><param name=\"ios-package\" value=\"CDVAccelerometer\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"NetworkStatus\"><param name=\"ios-package\" value=\"CDVConnection\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"ImagePicker\"><param name=\"ios-package\" value=\"SOSPicker\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SocialSharing\"><param name=\"ios-package\" value=\"SocialSharing\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<preference name=\"wechatappid\" value=\"wx2600c1664d3083bd\" />",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<feature name=\"WechatShare\"><param name=\"ios-package\" value=\"CDVWeChat\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"BCWifi\"><param name=\"ios-package\" value=\"BCWifi\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"WifiWizard\"><param name=\"ios-package\" value=\"NXWWifiWizard\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"DatePicker\"><param name=\"ios-package\" value=\"DatePicker\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"TravelersAppSetup\"><param name=\"ios-package\" value=\"TravelersAppSetup\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "framework": {
+                "parents": {
+                    "AssetsLibrary.framework": [
+                        {
+                            "xml": "false",
+                            "count": 4
+                        }
+                    ],
+                    "MobileCoreServices.framework": [
+                        {
+                            "xml": "false",
+                            "count": 2
+                        }
+                    ],
+                    "CoreGraphics.framework": [
+                        {
+                            "xml": "false",
+                            "count": 4
+                        },
+                        {
+                            "xml": "true",
+                            "count": 1
+                        }
+                    ],
+                    "ImageIO.framework": [
+                        {
+                            "xml": "true",
+                            "count": 1
+                        }
+                    ],
+                    "CoreLocation.framework": [
+                        {
+                            "xml": "false",
+                            "count": 2
+                        }
+                    ],
+                    "Foundation.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        },
+                        {
+                            "xml": "true",
+                            "count": 1
+                        }
+                    ],
+                    "AudioToolbox.framework": [
+                        {
+                            "xml": "true",
+                            "count": 1
+                        }
+                    ],
+                    "CFNetwork.framework": [
+                        {
+                            "xml": "true",
+                            "count": 1
+                        }
+                    ],
+                    "CoreFoundation.framework": [
+                        {
+                            "xml": "true",
+                            "count": 2
+                        }
+                    ],
+                    "SystemConfiguration.framework": [
+                        {
+                            "xml": "true",
+                            "count": 3
+                        },
+                        {
+                            "xml": "false",
+                            "count": 3
+                        }
+                    ],
+                    "UIKit.framework": [
+                        {
+                            "xml": "true",
+                            "count": 1
+                        }
+                    ],
+                    "CoreTelephony.framework": [
+                        {
+                            "xml": "true",
+                            "count": 1
+                        }
+                    ],
+                    "Security.framework": [
+                        {
+                            "xml": "true",
+                            "count": 1
+                        },
+                        {
+                            "xml": "false",
+                            "count": 2
+                        }
+                    ],
+                    "libz.dylib": [
+                        {
+                            "xml": "true",
+                            "count": 1
+                        },
+                        {
+                            "xml": "false",
+                            "count": 2
+                        }
+                    ],
+                    "QuartzCore.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "CoreMotion.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "Social.framework": [
+                        {
+                            "xml": "true",
+                            "count": 1
+                        }
+                    ],
+                    "MessageUI.framework": [
+                        {
+                            "xml": "true",
+                            "count": 1
+                        }
+                    ],
+                    "libsqlite3.0.dylib": [
+                        {
+                            "xml": "false",
+                            "count": 2
+                        }
+                    ],
+                    "libstdc++.6.dylib": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "libc++.dylib": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "*-Info.plist": {
+                "parents": {
+                    "NSLocationWhenInUseUsageDescription": [
+                        {
+                            "xml": "<string />",
+                            "count": 2
+                        }
+                    ],
+                    "CFBundleURLTypes": [
+                        {
+                            "xml": "<array><dict><key>CFBundleURLName</key><string>weixin</string><key>CFBundleURLSchemes</key><array><string>wx2600c1664d3083bd</string></array></dict></array>",
+                            "count": 1
+                        }
+                    ],
+                    "CFBundleDisplayName": [
+                        {
+                            "xml": "<string>克隆盒助手</string>",
+                            "count": 1
+                        }
+                    ],
+                    "NSAppTransportSecurity": [
+                        {
+                            "xml": "<dict><key>NSAllowsArbitraryLoads</key><true /></dict>",
+                            "count": 1
+                        }
+                    ],
+                    "LSApplicationQueriesSchemes": [
+                        {
+                            "xml": "<array><string>weixin</string><string>wechat</string></array>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "org.apache.cordova.console": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "org.apache.cordova.file": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "org.apache.cordova.file-transfer": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "org.apache.cordova.inappbrowser": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "org.apache.cordova.camera": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "org.apache.cordova.device": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "com.meteor.cordova-update": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "org.apache.cordova.statusbar": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "org.apache.cordova.splashscreen": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "com.ionic.keyboard": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "com.ben2.cordova.keyboard": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "org.apache.cordova.geolocation": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "org.apache.cordova.dialogs": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "com.clone.phonegap.plugins.PushPlugin": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "com.phonegap.JPushPlugin": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "com.file-transfer.baidu.bcs": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "nl.x-services.plugins.toast": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "org.apache.cordova.device-motion": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "org.apache.cordova.network-information": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "com.synconset.imagepicker": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "nl.x-services.plugins.socialsharing": {
+            "APP_ID": "wx2600c1664d3083bd",
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "com.moya.imagebase64": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "com.share.tencentShare": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "com.share.weiboShare": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "com.share.wechatShare": {
+            "APP_ID": "wx2600c1664d3083bd",
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "com.oauth.wechat": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "org.bcsphere.wifi": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "com.pylonproducts.wifiwizard": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "com.plugin.datepicker": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        },
+        "org.travelers.together.appsetup": {
+            "PACKAGE_NAME": "org.cloneboxassistant.together"
+        }
+    },
+    "dependent_plugins": {}
+}

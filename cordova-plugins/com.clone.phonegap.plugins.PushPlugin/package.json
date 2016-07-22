@@ -1,0 +1,20 @@
+{
+    "version": "2.4.1",
+    "name": "com.clone.phonegap.plugins.pushplugin",
+    "cordova_name": "PushPlugin",
+    "description": "\n\t\tThis plugin allows your application to receive push notifications on Android, iOS, WP8 and Windows8 devices.\n    Android uses Google Cloud Messaging.\n    iOS uses Apple APNS Notifications.\n    WP8 uses Microsoft MPNS Notifications.\n    Windows8 uses Microsoft WNS Notifications.\n\t",
+    "license": "MIT",
+    "platforms": [
+        "android",
+        "amazon-fireos",
+        "ios",
+        "wp8",
+        "windows8"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.0.0"
+        }
+    ]
+}

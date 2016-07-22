@@ -1,0 +1,36 @@
+<template name="notes_index">
+  <div id="partner_activities" class="notes">
+    <div class="head">
+        <strong>{{titleName}}</strong>
+        <div class="leftButton button_left"><i class="fa fa-chevron-left"></i></div>      
+        <button class="h-dh rightButton btn btn-default">{{publishBtn}}</button>
+    </div>
+    <ul class="lists">
+        {{#each lists}}
+        <li class="notes_list" id="{{_id}}">
+            <div class="title_image" style="position: relative">
+              {{> spinner_master}}
+              <img class="lazy2" data-original="{{titleImage.url}}" width="100%"  style="max-height: 300px;" >
+              {{#if is_admin}}
+              <button id="{{_id}}" style="position: absolute;right: 10px; bottom: 120px;" class="btn btn-default edit">编辑</button>
+              <button id="{{_id}}" style="position: absolute;right: 10px; bottom: 65px;" class="btn btn-default delete">删除</button>
+              {{/if}}
+              {{#if is_my this}}
+              <button id="{{_id}}" style="position: absolute;right: 10px; bottom: 120px;" class="btn btn-default edit">编辑</button>
+              <button id="{{_id}}" style="position: absolute;right: 10px; bottom: 65px;" class="btn btn-default delete">删除</button>
+              {{/if}}
+              {{#if isAd}}
+              <button id="{{_id}}" style="position: absolute;right: 10px; bottom: 10px;" class="btn btn-default order">排序</button>
+              <span id="orderArea" style="position: absolute;right: 90px; bottom: 10px;display:none" >
+                <input type="text" id="orderNum" value="{{order}}" style="width:30px" />
+                <button id="{{_id}}"  class="btn btn-default orderSubmit">确定</button>
+              </span>
+              {{/if}}
+            </div>
+            <tt style="padding-top: 5px;">{{title}}</tt>
+            <i>{{userName}}</i>
+        </li>
+        {{/each}}
+    </ul>
+  </div>
+</template>

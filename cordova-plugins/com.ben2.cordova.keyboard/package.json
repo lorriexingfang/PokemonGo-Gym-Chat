@@ -1,0 +1,20 @@
+{
+    "version": "0.1.2",
+    "name": "com.ben2.cordova.keyboard",
+    "cordova_name": "Keyboard",
+    "description": "Cordova Keyboard Plugin",
+    "license": "Apache 2.0",
+    "keywords": [
+        "cordova",
+        "keyboard"
+    ],
+    "platforms": [
+        "ios"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.2.0"
+        }
+    ]
+}

@@ -1,0 +1,72 @@
+/**
+ * @bishen.org
+ * 2014.11.11 玩个动画效果
+ */
+@-webkit-keyframes bishen{
+0% {background-position:left center;background-size:100% auto; }
+25% {background-position:center center;background-size:130% auto}
+50% {background-position:right top;background-size:180% auto}
+75% {background-position:auto bottom;background-size:150% auto}
+100% {background-position:left center;background-size:100% auto}
+}
+
+*{-webkit-touch-callout: none;-webkit-user-select: none;} 
+input {-webkit-user-select: auto;}
+textarea {-webkit-user-select: auto;}
+select {-webkit-user-select: auto;}
+
+#wrap{background-color:#fff; /* margin-bottom:10px; */}
+.homeMain  {clear:both;padding:0px;overflow:hidden;padding-bottom: 54px;}
+.homeMain  tt   {line-height:26px;padding:8px 0;padding-top:15px;display:block;font-style:normal; background:url(home/adorn.jpg) left 28px repeat-x;}
+.homeMain  tt b{padding:0 15px;display:inline-block;background:url(home/adorn.jpg) left center repeat-y #fff}
+.homeMain div.hottop{color:#fff;background-repeat: no-repeat;background-position: center center;background-size:100% auto}
+.homeMain div.hottop{height:36px;line-height:36px; padding:0 8px; padding-top:120px;text-shadow:2px 2px 2px #000, 0px 0px 10px #000, 0px 0px 20px #000}
+.homeMain ol.popular  {margin:0;padding:8px 0;list-style-type:none;overflow:hidden}
+.homeMain ol.popular li{float:left;width:30%;background-repeat: no-repeat;background-position:right center;background-size:98% auto}
+.homeMain ol.popular li{margin: 4px 2px;color:#fff;height:24px;line-height:24px;padding-right:2%;padding-top:50px;text-shadow:2px 2px 2px #000, 0px 0px 10px #000, 0px 0px 20px #000;text-align:right}
+//.homeMain ol.popular li:first-child{background-position:left center}
+//.homeMain ol.popular li:last-child{float:right}
+.homeMain .bg{width:100%;height:5px;border:solid 1px #ccc;background-color:#e2e1e1;border-left:0px;border-right:0px;}
+.homeMain .module{padding:10px;padding-top:0px;}
+.homeMain ul {margin:0;padding:0;overflow:hidden;list-style-type:none}
+.homeMain ul li{float:left;width:46%;margin-bottom:8px;background-repeat: no-repeat;background-position:left center;background-size:100% auto;}
+.homeMain ul li{color:#fff;height:24px;line-height:24px;padding-right:2%;padding-top:80px;text-shadow:2px 2px 2px #000, 0px 0px 10px #000, 0px 0px 20px #000;text-align:right;margin-right: 3px;margin-left:3px;}
+.homeMain ul li:nth-child(2n){background-position:right center}
+.homeMain .bottom {padding-top:90px}
+.searchBg    {position:fixed;z-index:10;height:30px;top:10px;left:10px;right:10px;background-color:#333;opacity:0.6; border-radius:5px}
+.search        {position:fixed;z-index:11;margin:0;padding:0;top:15px;left:10px;right:10px;color:#fff; font-weight: normal}
+.search label{display:block;width:72%;float: left; overflow: hidden}
+.search input{border:none; background-color:transparent;color:#fff;width:100%}
+.search i    {float:left;padding:3px 10px;font-size:16px}
+.search i:last-child{float:right;padding:3px 15px;border-left:1px solid #fff}
+
+.home{
+  background-color: #E2E0E1; padding-bottom: 54px;
+  .top{
+    width: 100%; border-bottom: 1px solid #CECECE;background-color: #fff; margin-bottom: 5px; position: relative;
+    .top-bg img{width: 100%;}
+    .user-pic{
+      width: 60px; height: 60px;border-radius:50%;box-shadow: 0 0 15px #fff, 0 0 3px #fff;
+      position: absolute; left: 15px; bottom: 5px;
+      img{width: 60px; height: 60px;border-radius:50%;}
+    }
+    .nearby{position: absolute;right: 5px; bottom: 15px; color: #fff; font-weight: bold; padding: 0 10px;}
+  }
+  .layout{
+    border-top: 1px solid #CECECE;background-color: #fff;
+    .title{
+      padding: 8px 10px;
+      b{height: 30px; line-height: 30px; padding-left: 10px; border-left: 5px solid #03BB99; font-size: 16px; color: #565656;}
+    }
+    ul{
+      width: 100%;
+      li{
+        width: 100%;position: relative; margin-top: 5px;
+        img{width: 100%; min-height: 100px;}
+        h1{height: 20px; line-height: 20px; font-size: 20px;font-weight: bold;position: absolute;left: 10px; top: 15px; color: #fff; overflow: hidden; margin: 0; padding: 0;}
+        summary{position: absolute; left: 10px; top: 40px; color: #fff;}
+      }
+      li:first-child{margin-top: 0;}
+    }
+  }
+}

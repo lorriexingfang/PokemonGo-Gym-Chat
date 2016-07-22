@@ -1,0 +1,49 @@
+//@import '../stylesheets/mixins.import.less';
+//@import '../stylesheets/variables.import.less';
+//@import '../stylesheets/font-awesome/font-awesome.import.less';
+
+/* Wrapper for page content to push down footer */
+#wrap {
+    min-height: 100%;
+    height: auto;
+    /* Negative indent footer by its height */
+    /*margin: 0 auto -54px;*/
+    /* Pad bottom by footer height */
+    /*margin: 0 0 54px;*/
+}
+/* Set the fixed height of the footer here */
+
+
+#footer .btn{
+    height:56px;
+    /*background-color: #f5f5f5;*/
+    background-color: #f2f2f2;
+    padding: 0 0;
+    margin: 0 0;
+    width: 100%;
+}
+.foot-btn {
+    color: #9d9d9d;
+    /*color: #00a1e9;*/
+}
+#footer { background-color:#f2f2f2;}
+/*#footer { background-color:#1f272d;}*/
+#footer .btn {border:0px;color: #9d9d9d; font-size: 12px; background:#f2f2f2;}
+/*#footer .btn {border:0px;color: #fff; font-size: 14px; background:#1f272d;}*/
+#footer .btn:focus,#footer .focus {color:#00a1e9 !important;}
+#footer .btn.focus,#footer .btn:active.focus,#footer .btn.active.focus{outline:none;border: 0;}
+#footer .btn-group{position:relative;}
+#footer .btn-group #my_message {position:relative;}
+#footer .btn-group .msg_count{z-index:99999; width:18px; height:18px; line-height: 18px;position: absolute;right:-6px; top:-1px; border-radius: 50%;font-size:8px; text-align:center; background:#F46B0A; color:#fff; }
+
+#footer{
+  height: 52px;
+  .btn-group{
+    .item{
+      width: 45px; height: 45px; border-radius: 50%; margin: 0 auto; color: #999999; text-align: center; margin-top: 4px;
+      img{max-width: 18px; max-height: 18px; margin-bottom: 3px; margin-top: 5px;}
+      span{display: block; font-size: 12px;}
+    }
+    .item.hover{ background-color: #374953; color: #fff;}
+  }
+}

@@ -1,0 +1,34 @@
+<div id="page_partner_add" data-role="page" class="ui-page">
+		<div data-role="header">
+			<a id="btn_cancel" class="btnFont ui-btn-left ui-nodisc-icon ui-alt-icon" data-transition="slide" data-rel="back" data-role="button" href="#partner_home">取消</a>
+			<h1>求搭伙</h1>
+			<a id="btn_release" class="btnFont ui-btn-right ui-nodisc-icon ui-alt-icon" href="javascript:partner_add.submitData()" data-role="button">发布</a>
+		</div>
+		<div role="main" class="ui-content">
+            <div data-role="fieldcontain">
+                <label for="aa"><i class="fa fa-map-marker fa-2x" style="font-size:24px"></i>旅游线路：</label>
+                <input type="text" name="aa" id="edit_line" placeholder="请用空格分隔...如:大理 丽江" >
+                <label for="bb"><i class="fa fa-clock-o fa-2x" style="font-size:24px"></i>出发时间：</label>
+                <input type="date" name="bb" id="edit_start_time" placeholder="" >
+                <label for="cc"><i class="fa fa-calendar fa-2x" style="font-size:24px" placeholder="" ></i>旅游天数：</label>
+                <input type="number" name="cc" id="edit_days">
+            </div>
+            <dl class="tagicos">
+                <a href="javascript:partner.enter_partner_tags();" class="fa fa-plus-circle" style="font-size:16px;border:none"></a>
+            	<dt><i class="fa fa-tags" style="font-size:24px"></i>标签:</dt>
+                <dd>标签</dd>
+                <dd>标签</dd>
+                <dd>标签</dd>
+            </dl>
+    		<textarea name="addinfo" placeholder="求搭伙，说点什么？" id="edit_say_sth" ></textarea>
+           <div style="padding:5px">
+                <i class="fa fa-twitter" style="font-size:24px;float:right"></i>
+                <i class="fa fa-weibo" style="font-size:24px;float:right"></i>
+                <i class="fa fa-tencent-weibo" style="font-size:24px;float:right"></i>
+                
+                <i class="fa fa-photo fa-3x" style="font-size:24px"></i>
+                <i class="fa fa-camera-retro fa-3x" style="font-size:24px"></i>
+                <i class="fa fa-smile-o fa-3x" style="font-size:24px"></i>
+            </div>
+        </div>
+	</div>

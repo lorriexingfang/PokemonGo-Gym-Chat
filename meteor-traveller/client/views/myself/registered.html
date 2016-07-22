@@ -1,0 +1,86 @@
+<template name="registered_one">
+    <div class="dashBoard">
+		<div class="head">
+			<div id="btn_back" class="leftButton"><i class="fa fa-chevron-left"></i></div>
+			<strong>注册</strong>
+			<button id="btn_login" class="h-dh rightButton btn btn-default">登录</button>
+		</div>
+        <form class="loginBody" id="form-registered">
+			<div>
+				<label class="input-group" style='border-bottom: solid 0px' >
+					<span><i class="fa fa-mobile fa-fw"></i></span>
+					<input type="text" id="name" placeholder="请填写手机号码">
+				</label>
+			</div>
+    <span style='color: #f19c38;' >{{smsMsg}}</span>
+			<input type="submit" value="获取验证码" id="sub-registered">
+		</form>
+    </div>
+</template>
+
+<template name="registered">
+	<style type="text/css">
+	    .head .rightButton{
+	      background-color: #374A53;
+	    }
+
+		.dashBoard .loginBody {
+			padding: 48px 0 0 0;
+		}
+
+		.dashBoard .loginBody > div {
+			border: none;
+			border-bottom: 1px solid #EFEFF4;
+		}
+
+		.dashBoard .loginBody > div > label {
+			height: 60px;
+			border-bottom: 1px solid #EFEFF4;
+		}
+
+		.dashBoard .loginBody > div > label > input {
+			height: 60px;
+			line-height: 1;
+		}
+
+		.dashBoard .loginBody #sub-registered{
+			display: block;
+			width: 205px;
+			height: 45px;
+			border-radius: 7px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 52px;
+		}
+	</style>
+	<div class="dashBoard">
+		<div class="head">
+			<div id="btn_back" class="leftButton" style="display:none;"><i class="fa fa-chevron-left"></i></div>
+			<strong>{{_ "signUp"}}</strong>
+			<div id="btn_back" class="leftButton"><i class="fa fa-chevron-left"></i></div>
+			<button id="btn_login" class="h-dh rightButton btn btn-default">{{_ "logIn"}}</button>
+		</div>
+		<form class="loginBody" id="form-registered">
+			<div>
+				<label class="input-group">
+					<span><i class="fa fa-envelope-o fa-fw"></i></span>
+					<input type="text" id="names" placeholder="{{_ 'enterRegEmail'}}">
+				</label>
+    <label class="input-group">
+					<span><i class="fa fa-user fa-fw"></i></span>
+					<input type="text" maxlength="32" id="nike" placeholder="{{_ 'nike'}}">
+				</label>
+				<label class="input-group">
+				  <span><i class="fa fa-key fa-fw"></i></span>
+				  <input type="password" id="pass" placeholder="{{_ 'enterPass'}}">
+				</label>
+				<label class="input-group" style="border:0px;margin-bottom:0px;">
+				  <span><i class="fa fa-key fa-fw"></i></span>
+				  <input type="password" id="pass2" placeholder="{{_ 'passAgain'}}">
+				</label>
+			</div>
+    <span ><a href="#" id="see_deal" >{{_ "serviceNote"}}</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="deal_check" ><label for="deal_check">&nbsp;{{_ "iAgree"}}</label></span>
+			<input type="submit" value="{{_ 'signUp'}}" id="sub-registered">
+		</form>
+	</div>
+</template>

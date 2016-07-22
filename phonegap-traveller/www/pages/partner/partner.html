@@ -1,0 +1,102 @@
+<div id="partner_home" data-role="page" class="ui-page">
+	<div data-role="header" style="left: 0; right: 0; width: 100%; top: -1px; position: fixed; z-index: 1000;" data-tap-toggle="false">
+		<h1>搭伙</h1>
+		<a id="btn_add" class="btnFont ui-btn-right ui-nodisc-icon ui-alt-icon" data-transition="slide" data-role="button"
+			href="javascript:partner.enter_partner_add();" style="top: 1px; background-color: #E9E9E9; border: none; border-style: hidden;">
+			<i class="fa fa-edit" style="font-size: 20px;"></i>
+		</a>
+	</div>
+
+	
+<div role="main" class="ui-content" style="padding: 0px;width:100%;height:auto;">
+        	<div id="marquee" style="width:100%;height:90px;margin-top: 43px;background:url(../../img/partner_banner.jpg);background-size:100% auto;overflow:hidden">
+            	<!-- 模板
+            	<div class="marquee" id="${id}">
+            		<ul>
+            			<li><a href="${link}">${title}</a></li>
+            		</ul>
+            	</div>
+            	模板 -->
+            	<div class="marquee" id="marquee1">
+					<ul>
+						<li><a href="#">马尔代夫：拂过面颊的蓝色</a></li>
+						<li><a href="#">拂过面颊的蓝色</a></li>
+						<li><a href="#">墨尔本简单介绍二</a></li>
+						<li><a href="#">2013雾凇岛、雪乡、哈尔滨3日</a></li>
+						<li><a href="#">山水风霜勾勒的色彩天堂</a></li>
+						<li><a href="#">东方之珠，购物天堂</a></li>
+					</ul>
+				</div>
+                <div class="marquee" id="marquee2">
+					<ul>
+						<li><a href="#">海风吹来的清新</a></li>
+						<li><a href="#">穿越怀旧的国度</a></li>
+						<li><a href="#">一山有四季，十里不同天</a></li>
+						<li><a href="#">俄罗斯风情的草原梦</a></li>
+						<li><a href="#">天地心机，自然造化</a></li>
+						<li><a href="#">教化众生的道场</a></li>
+					</ul>
+				</div>
+                <div class="marquee" id="marquee3">
+					<ul>
+						<li><a href="#">魅力长白山~丹东浪漫之旅</a></li>
+						<li><a href="#">厦门三日精华</a></li>
+						<li><a href="#">寻找最中意的小客栈</a></li>
+						<li><a href="#">古城溜达、发呆、烤太阳</a></li>
+						<li><a href="#">登狮子山，看大研全景</a></li>
+						<li><a href="#">纳西名菜三叠水第三叠</a></li>
+					</ul>
+				</div>
+            </div>
+			<div id="travelist" style="background:#f3f3f3">
+				<dl class="title"><dt></dt><dd>${title}</dd></dl>
+				<div class="swiper-container" id="swiper-container${i}">
+					<div class="swiper-wrapper" id="swiper-wrapper${i}">
+						<!-- photolists -->
+						<div  class="swiper-slide" style="background-image:url(${img})">
+							<p class="swiper-title"  onclick="partner.enter_partner_list('${title_name}')">${name}</p>
+						</div>
+						<!-- /photolists -->
+					</div>
+				</div>
+			</div>
+	</div>
+
+	<div data-role="footer" data-position="fixed" data-id="footernav" data-tap-toggle="false">
+		<div data-role="navbar" data-iconpos="top">
+			<ul>
+				<li><a href="javascript:index_nav.enter_bblist_l()">
+						<div>
+							<i class="fa fa-list-alt" style="font-size: 24px;"></i>
+						</div>
+						小黑板
+					</a></li>
+				<li><a href="javascript:index_nav.enter_partner_r()" class="ui-btn-active">
+						<div>
+							<i class="fa fa-child" style="font-size: 24px;"></i>
+						</div>
+						搭伙
+					</a></li>
+				<li><a href="javascript:index_nav.enter_sendingCenter()">
+						<div>
+							<i class="fa fa-plus-square" style="font-size: 35px; color: rgb(0, 230, 207); padding: 2.5px;"></i>
+						</div>
+					</a></li>
+				<li><a href="javascript:index_nav.enter_local_r()">
+						<div>
+							<i class="fa fa-map-marker" style="font-size: 24px;"></i>
+						</div>
+						当地人
+					</a></li>
+				<li><a href="javascript:index_nav.enter_mine_r()">
+						<div>
+							<i class="fa fa-user" style="font-size: 24px;"></i>
+						</div>
+						我的
+					</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+</div>

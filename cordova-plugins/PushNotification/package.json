@@ -1,0 +1,26 @@
+{
+  "version": "3.0.5",
+  "name": "cordova-plugin-telerik-pushnotifications",
+  "cordova_name": "Telerik Push Notifications",
+  "description": "This plugin allows your application to receive push notifications. Tailored for (but not limited to) Telerik Platform Backend Services.",
+  "license": "MIT",
+  "repo": "https://github.com/Telerik-Verified-Plugins/PushNotification.git",
+  "issue": "https://github.com/Telerik-Verified-Plugins/PushNotification/issues",
+  "keywords": [
+    "Push",
+    "Notification",
+    "Push Notifications",
+    "ecosystem:cordova"
+  ],
+  "platforms": [
+    "ios",
+    "android",
+    "wp8"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ]
+}

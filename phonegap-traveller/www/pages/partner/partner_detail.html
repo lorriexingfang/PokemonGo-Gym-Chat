@@ -1,0 +1,147 @@
+<div id="partner_detail" data-role="page" class="ui-page">
+	<div data-role="header" data-position="fixed" style="left: 0; right: 0; width: 100%; top: -1px; position: fixed; z-index: 1000;"
+		data-tap-toggle="false">
+		<a id="btn_back" class="btnFont ui-btn-left ui-nodisc-icon ui-alt-icon" data-transition="slide" data-rel="back" data-role="button"
+			style="top: 1px; background-color: #E9E9E9; border: none; border-style: hidden;">
+			<i class="fa fa-arrow-left" style="font-size: 20px;"></i>
+		</a>
+		<h1>搭伙详情</h1>
+		<a id="chat" class="btnFont ui-btn-right ui-nodisc-icon ui-alt-icon" data-transition="slide" data-role="button"
+			style="top: 1px; background-color: #E9E9E9; border: none; border-style: hidden;">
+			<i class="fa fa-share-square-o" style="font-size: 20px;"></i>
+		</a>
+	</div>
+	<div role="main" class="ui-content" style="padding: 0 0;">
+		<!-- <div id="partner_list_main">
+			<ul id="list_template" data-role="listview" data-inset="true">
+				<li><a id="changeToDetail" data-role="button">
+						<span id="gravatar" style="display: block; float: left; margin-right: .7em;">
+							<img id="namelogo" src="">
+						</span>
+						<span id="name_location" style="display: block;">
+							<span id="username" style="display: block; margin: 5px 0;"></span>
+							<i class="fa fa-map-marker" style="font-size: 15px; float: left; margin-right: .2em;"></i>
+							<span id="userCity" style="display: block; font-size: 13px;"></span>
+						</span>
+						<span style="display: block; margin-top: 12px;">
+							<span>线路：</span>
+							<span id="line"></span>
+						</span>
+						<span style="display: block; margin-top: 5px;">
+							<span>时间：</span>
+							<span id="start_time"></span>
+						</span>
+						<div style="width: 100%; height: 1px; padding: 5px 0;">
+							<span style="background: #bbbbbb; width: 100%; height: 1px; display: block;"></span>
+						</div>
+						<span id="description" style="white-space: normal;"></span>
+						<div id="attachments" style="padding: 5px 0;">
+							<img alt="" src="../../img/roles/role_1_2.jpg" style="margin-right: 10px;"><img alt="" src="../../img/roles/role_1_3.jpg">
+						</div>
+						<span id="createTime" style="font-size: .9em;">15分钟前</span>
+						<span style="float: right;">
+							<i class="fa fa-heart oneline" style="font-size: 15px; color: #e51c23;"></i>
+							<span id="like" class="oneline">1190</span>
+							<i class="fa fa-comment-o oneline" style="font-size: 17px; color: #444444;"></i>
+							<span id="comment">213</span>
+						</span>
+					</a></li>
+			</ul>
+		</div> -->
+		<div id="partner_detail_main" style="padding: 1em 1em;">
+			<ul id="detail" data-role="listview" data-inset="true" style="border: none;">
+				<li style="border-bottom-width: 0; padding-left: 1em;">
+					<div id="gravatar" style="float: left; margin-right: .7em;">
+						<img id="namelogo" src="../../img/default_user_logo.png">
+					</div>
+					<div id="name_location">
+						<div id="username" style="margin: 5px 0;"></div>
+						<i class="fa fa-map-marker" style="font-size: 15px; float: left; margin-right: .2em;"></i>
+						<div id="userCity" style="font-size: 13px;"></div>
+					</div>
+					<div style="margin-top: 12px;">
+						<span>线路：</span>
+						<span id="route"></span>
+					</div>
+					<div style="margin-top: 5px;">
+						<span>时间：</span>
+						<span id="start_time">10-20～10-29</span>
+					</div>
+					<div id="line" style="width: 100%; height: 1px; padding: 5px 0;">
+						<span style="background: #bbbbbb; width: 100%; height: 1px; display: block;"></span>
+					</div> <span id="description" style="white-space: normal;">10月20日一个人穷游云南，曼谷出发，昆明，大理，丽江，泸沽湖，香格里拉。求路线一致的小伙伴，住宿全程青旅。最好可以组队徒步梅里雪山。</span>
+					<div id="attachments" style="padding: 5px 0;">
+						<!-- <img alt="" src="../../img/roles/role_1_2.jpg" style="margin-right: 10px;"><img alt="" src="../../img/roles/role_1_3.jpg"> -->
+					</div> <span id="createTime" style="font-size: .9em;">18分钟前</span>
+					<div style="float: right;">
+						<i class="fa fa-heart oneline" style="font-size: 15px; color: #e51c23;"></i>
+						<span id="like" class="oneline">1190</span>
+						<i class="fa fa-comment-o oneline" style="font-size: 17px; color: #444444;"></i>
+						<span id="comment">213</span>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div id="line" style="width: 100%; padding-top: 5px;">
+			<span style="background: #bbbbbb; width: 100%; height: 1px; display: block;"></span>
+		</div>
+		<ul id="revert_list" data-role="listview" style="border: none; padding: 1em 1em;">
+			<li id="revert_temp" style="border: none; border-bottom-width: 0; padding: 0 1em;">
+				<div style="min-height: 60px; padding-top: 1em;">
+					<div id="gravatar" style="float: left; margin-right: .7em;">
+						<img style="width:50px;height:50px" id="userlogo" src="../../img/default_user_logo.png">
+					</div>
+					<div>
+						<span id="username" style="margin: 1em 0; color: #009688">炜哥奔向美好新生活:</span>
+						<span id="content" style="white-space: normal;">如果你无法简洁的表达你的想法，只能说明你还不够了解它。</span>
+					</div>
+				</div> <span id="createTime" style="font-size: .9em;">5分钟前</span>
+				<div style="float: right;">
+					<i class="fa fa-comment-o oneline" style="font-size: 17px; color: #444444;"></i>
+					<span id="revert" style="margin-right: 1em; color: #009688">回复</span>
+				</div>
+				<div id="line" style="width: 100%; padding-top: 5px;">
+					<span style="background: #bbbbbb; width: 100%; height: 1px; display: block;"></span>
+				</div>
+			</li>
+		</ul>
+		<div class="middle" style="padding: 2em; background-color: #fff;display: none;">
+			<span>更多评论</span>
+			<i class="fa fa-angle-double-right" style="font-size: 24px;"></i>
+		</div>
+	</div>
+	<div data-role="footer" data-position="fixed" style="position: fixed; left: 0; right: 0; width: 100%; height: 50px; bottom: -1px; z-index: 1000;"
+		data-tap-toggle="false">
+		<div class="ui-grid-b">
+			<div class="ui-block-a" style="width: 60%; margin-left: 8px;">
+				<a href="javascript:partner_detail.enter_partner_comment();" style="border: none;">
+					<input style="ime-mode: disabled" type="text" placeholder="我来说几句...">
+				</a>
+			</div>
+			<div class="ui-block-b middle" style="width: 15%;">
+				<i class="fa fa-heart" style="padding: .7em 1em; font-size: 24px; color: #e51c23;"></i>
+			</div>
+			<div class="ui-block-c middle" style="width: 22%;">
+				<a data-role="button" style="background: #FFA726; color: #FFFFFF; border-style: none; font-weight: normal; margin: .8em 0;">
+					<span>聊天</span>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

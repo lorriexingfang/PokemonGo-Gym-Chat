@@ -1,0 +1,109 @@
+<template name="partner_finding">
+	<div id="partner_finding">
+		<div class="head">
+          {{#if admin user.profile.isAdmin}}
+            <button id="btn_report" class="h-dh rightButton btn btn-default">举报</button>
+          {{/if}}
+			<strong>小店公告</strong>
+            <div id="search_posts" class="leftButton"><i class="fa fa-search"></i></div>
+            {{#if notadmin user.profile.isAdmin}}
+            <div id="publish_posts" class="rightButton"><i class="fa fa-plus-circle"></i><div style="
+                  float: right;
+                  line-height: 38px;
+                  margin-left: 4px;
+                  margin-right: 5px;
+                  font-size: 15px;
+            ">发搭伙</div></div>
+            {{/if}}
+            <div id="line"></div>
+			<div id="header_navbar" class="navbar navbar-default">
+                <div class="btn-group btn-group-justified">
+                    {{#if isPview 'partner_about'}}
+                    <div class="btn-group" id="partner_about" style="border-bottom:1px solid #05bbe2;color:#05bbe2">
+                        <div>附近</div>
+                    </div>
+                    {{else}}
+                    <div class="btn-group" id="partner_about">
+                        <div>附近</div>
+                    </div>
+                    {{/if}}
+                    {{#if isPview 'partner_hits'}}
+                    <div class="btn-group" id="partner_hits" style="border-bottom:1px solid #05bbe2;color:#05bbe2">
+                        <div>推荐</div>
+                    </div>
+                    {{else}}
+                    <div class="btn-group" id="partner_hits">
+                        <div>推荐</div>
+                    </div>
+                    {{/if}}
+                    {{#if isPview 'wifiOffline'}}
+                    <div class="btn-group" id="partner_new" style="border-bottom:1px solid #05bbe2;color:#05bbe2">
+                        <div>WIFI商家</div>
+                    </div>
+                    {{else}}
+                    <div class="btn-group" id="partner_new">
+                        <div>WIFI商家</div>
+                    </div>
+                    {{/if}}
+                </div>
+            </div>
+		</div>
+		<div id="finding_list">
+			<div style="position: relative;padding-top: 90px;background-color: #f6f5f3;padding-bottom: 55px;">
+				{{> Template.dynamic template=pview}}
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="partner_hits">
+    {{#if data lists}}
+      {{#each lists}}
+      {{> theme_list}}
+      {{/each}}
+      <div id="load-more-partner-hits" class="up-load-more">上拉加载更多</div>
+    {{else}}
+      <div class="no-data" style="margin-bottom: -55px;margin-top: -10px;">
+        {{#if loading}}
+          <div class="no-data-loading">
+            <i class="fa fa-spinner fa-spin"></i>
+            <span>搭伙消息加载中...</span>
+          </div>
+        {{/if}}
+        <div class="no-data-tips">
+          <img src="/no_data_01.jpg" />
+          <span>还没有相关的搭伙消息<br />点击右上角发布第一条搭伙吧～</span>
+        </div>
+      </div>
+    {{/if}}
+</template>
+
+<template name="partner_about">
+    {{#if data lists}}
+      {{#each lists}}
+      {{> theme_list}}
+      {{/each}}
+      <div id="load-more-partner-about" class="up-load-more">上拉加载更多</div>
+    {{else}}
+      <div class="no-data" style="margin-bottom: -55px;margin-top: -10px;">
+        {{#if loading}}
+          <div class="no-data-loading">
+            <i class="fa fa-spinner fa-spin"></i>
+            <span>搭伙消息加载中...</span>
+          </div>
+        {{/if}}
+        <div class="no-data-tips">
+          <img src="/no_data_01.jpg" />
+          <span>还没有相关的搭伙消息<br />点击右上角发布第一条搭伙吧～</span>
+        </div>
+      </div>
+    {{/if}}
+</template>
+
+<template name="partner_new">
+    <div id="blackboard" style="padding-top: 10px;">
+        <div class="blackboard_main">
+            {{> blackboard_main_post}}
+        </div>
+    </div>
+</template>

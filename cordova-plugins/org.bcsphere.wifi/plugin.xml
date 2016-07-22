@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="org.bcsphere.wifi"
+    version="0.0.1">
+
+    <name>Wifi</name>
+	<description>Wifi Plugin</description>
+	<license>Apache 2.0</license>
+	<keywords>bcsphere,wifi</keywords>
+	<engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+	
+	<js-module src="www/wifi.js" name="wifi">
+        <merges target="navigator.wifi" />
+    </js-module>
+
+  <!-- android -->
+  <platform name="android">
+	
+	<config-file target="res/xml/config.xml" parent="/*">
+        <feature name="BCWifi">
+            <param name="android-package" value="org.bcsphere.wifi.BCWifi"/>
+        </feature>
+    </config-file>
+    
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+      <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    </config-file>
+
+    <source-file src="src/android/org/bcsphere/wifi/BCWifi.java" target-dir="src/org/bcsphere/wifi" />
+
+  </platform>
+
+  <!-- ios -->
+  <platform name="ios">
+      <config-file target="config.xml" parent="/*">
+          <feature name="BCWifi">
+              <param name="ios-package" value="BCWifi"/>
+          </feature>
+      </config-file>
+    
+      <header-file src="src/ios/BCWifi.h" />
+      <source-file src="src/ios/BCWifi.m" />
+      <framework src="SystemConfiguration.framework" weak="true" />
+  </platform>
+</plugin>

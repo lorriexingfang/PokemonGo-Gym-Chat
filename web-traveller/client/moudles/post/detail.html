@@ -1,0 +1,51 @@
+<template name="postDetail">
+  <div class="postDetail">
+    <div class="post">
+      <div class="user">
+        <div class="photo"><img src="{{userPicture}}" /></div>
+        <div class="name"><b>{{getUserName userId}}</b></div>
+        <div><b>{{_ "departureTime"}}：</b>{{startDate}}</div>
+      </div>
+      <div class="text">
+        {{text}}
+      </div>
+      <div class="image">
+        {{#each images}}
+        <img src="{{url}}" />
+        {{/each}}
+      </div>
+      {{#if is_local type}}
+      <div class="time"><i class="fa fa-clock-o"></i>{{time_diff createdAt}}</div>
+      {{else}}
+      <div class="address">
+        <i class="fa fa-map-marker"></i>{{city}}
+      </div>
+      <div class="views">
+        {{#each limit_num 2 views}}
+          <img src="{{getUserPicture userId}}" />
+        {{/each}}
+      </div>
+      {{/if}}
+      <div class="reply_count">
+        {{_ "comment"}}（{{replys.length}}）
+      </div>
+    </div>
+    {{#if is_reply replys}}
+    <div class="reply">
+      {{#each replys}}
+        <div class="user">
+          <div class="photo"><img src="{{userPicture}}" /></div>
+          <div class="name">{{username}}</div>
+          <div class="comment">
+            {{#if toUserId}}
+              {{_ "replay"}}@<span class="replyTo">{{getUserName toUserId}}：</span>
+            {{/if}}
+            {{comment}}
+          </div>
+          <div class="time"><i class="fa fa-clock-o"></i>{{time_diff createdAt}}</div>
+        </div>
+      {{/each}}
+    </div>
+    {{/if}}
+  </div>
+</template>

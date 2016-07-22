@@ -1,0 +1,69 @@
+@CHARSET "UTF-8";
+
+ui-content {
+	padding: 0
+}
+
+.ui-page {
+	-webkit-backface-visibility: hidden;
+}
+
+#partner_list_main ul {
+	border: none;
+}
+
+#partner_list_main ul li {
+	border-bottom-width: 0;
+}
+
+#changeToDetail {
+	background: #FFFFFF;
+	padding-left: 1em;
+}
+#namelogo{
+    width: 50px;
+    height: 50px;
+}
+
+.ve {
+	padding: 0 5px;
+	position: absolute;
+}
+
+.ve span {
+	background: #009688;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.text {
+	text-align: left;
+	line-height: 21px;
+}
+
+.userName {
+	color: #009688";
+}
+
+.oneline {
+	margin-right: 5px;
+}
+
+.middle {
+	text-align: center;
+	margin: 0 auto;
+}
+
+ul li a span {
+	font-weight: normal;
+	color: #333333;
+}
+
+.btnFont {
+	color: #555555 !important;
+}
+
+#commentTextarea {
+	height: 10em !important;
+}

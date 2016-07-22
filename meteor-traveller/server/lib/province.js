@@ -1,0 +1,105 @@
+//全国省份
+province = [
+{  
+    "ProID": 30,  
+    "name": "云南"  
+}, {  
+    "ProID": 1,  
+    "name": "北京"
+}, {  
+    "ProID": 2,  
+    "name": "天津"
+}, {  
+    "ProID": 3,  
+    "name": "河北"
+}, {  
+    "ProID": 4,  
+    "name": "山西"   
+}, {  
+    "ProID": 5,  
+    "name": "内蒙古"
+}, {  
+    "ProID": 6,  
+    "name": "辽宁" 
+}, {  
+    "ProID": 7,  
+    "name": "吉林"
+}, {  
+    "ProID": 8,  
+    "name": "黑龙江"   
+}, {  
+    "ProID": 9,  
+    "name": "上海市" 
+}, {  
+    "ProID": 10,  
+    "name": "江苏" 
+}, {  
+    "ProID": 11,  
+    "name": "浙江"  
+}, {  
+    "ProID": 12,  
+    "name": "安徽"  
+}, {  
+    "ProID": 13,  
+    "name": "福建"  
+}, {  
+    "ProID": 14,  
+    "name": "江西"  
+}, {  
+    "ProID": 15,  
+    "name": "山东" 
+}, {  
+    "ProID": 16,  
+    "name": "河南" 
+}, {  
+    "ProID": 17,  
+    "name": "湖北" 
+}, {  
+    "ProID": 18,  
+    "name": "湖南"  
+}, {  
+    "ProID": 19,  
+    "name": "广东"  
+}, {  
+    "ProID": 20,  
+    "name": "海南"
+}, {  
+    "ProID": 21,  
+    "name": "广西" 
+}, {  
+    "ProID": 22,  
+    "name": "甘肃"  
+}, {  
+    "ProID": 23,  
+    "name": "陕西"  
+}, {  
+    "ProID": 24,  
+    "name": "新疆"  
+}, {  
+    "ProID": 25,  
+    "name": "青海" 
+}, {  
+    "ProID": 26,  
+    "name": "宁夏"
+}, {  
+    "ProID": 27,  
+    "name": "重庆"  
+}, {  
+    "ProID": 28,  
+    "name": "四川" 
+}, {  
+    "ProID": 29,  
+    "name": "贵州" 
+}, {  
+    "ProID": 31,  
+    "name": "西藏" 
+}, {  
+    "ProID": 32,  
+    "name": "台湾"
+}, {  
+    "ProID": 33,  
+    "name": "澳门" 
+}, {  
+    "ProID": 34,  
+    "name": "香港" 
+}]

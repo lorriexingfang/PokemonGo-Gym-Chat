@@ -1,0 +1,31 @@
+@CHARSET "UTF-8";
+/* bi.shen */
+dl,dt,dd,p,ul,ol {margin:0;padding:0;list-style-type:none}
+.marquee        {width:100%;height:30px;overflow:hidden}
+.marquee ul li  {float:left;padding:0 10px;line-height:30px}
+.marquee a       {background-color:transparent; border:none; text-shadow:none}
+.marquee a:link,.marquee a:visited {color:#fff;text-decoration:none}
+.marquee a:hover            {color:#FC0;text-decoration:underline}
+dl.title         {padding:5px;height:40px;overflow:hidden}
+dl.title dt      {float:left;width:5px;height:18px;margin-top:12px;background-color:#009688}
+dl.title dd      {margin-left:12px;line-height:40px;font-size:1em}
+.swiper-container{width:100%;text-align:center;overflow:hidden}
+.swiper-slide    {width:50%;background-repeat:no-repeat;background-position:center center;background-size:98% auto}
+.swiper-slide p  {margin:0;padding:0;margin:0 auto;display:-webkit-box;width:98%;height:100%;color:#fff;font-size:1em;overflow:hidden;-webkit-box-orient: vertical;-webkit-box-pack: end; -webkit-box-align: center;}
+.swiper-slide p  {background-image:-webkit-gradient(linear,center 60%,center bottom,from(transparent),to(#000));background:-moz-linear-gradient(top,transparent,transparent,#333);background:-o-linear-gradient(top,transparent,transparent,#333)}
+/*
+.swiper-slide p  {background-image:-webkit-gradient(linear,center 60%,center bottom,from(transparent),to(#000));background:-moz-linear-gradient(top,transparent,transparent,#333);background:-o-linear-gradient(top,transparent,transparent,#333)}
+.pagination      {position:absolute;z-index:20;left:10px;bottom:10px}
+.swiper-pagination-switch{display:inline-block;width:8px;height:8px;border-radius:8px;background:#222;margin-right:5px;opacity:0.8;border:1px solid #fff;cursor:pointer}
+.swiper-visible-switch{background:#aaa}
+.swiper-active-switch{background:#fff}
+*/
+
+.ui-content i {margin-right:6px;font-size:1em}
+
+.tagicos      {height:30px;line-height:30px;overflow:hidden}
+.tagicos dt   {float:left;width:22%}
+.tagicos dd   {float:left;width:55px;line-height:28px;margin-top:2px;margin-right:5px;text-align:center;color:#fff;background-color:#09C;border-radius:5px}
+.tagicos a{float:right;width:20px;margin-top:4px}
+.tagicos dd:hover{background-color:#F60}
+.fright       {float:right}

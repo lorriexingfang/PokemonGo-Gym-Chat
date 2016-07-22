@@ -1,0 +1,68 @@
+if Meteor.isServer
+  Meteor.startup ()->
+    Meteor.users._ensureIndex({"profile.location.coordinates": "2d"})
+    Meteor.users._ensureIndex({"profile.lastLocation.coordinates": "2d"})
+    Meteor.users._ensureIndex({"profile.businessLocation.coordinates": "2d"})
+    mongoPosts._ensureIndex({'replys.userId': 1})
+    mongoPosts._ensureIndex({type: 1, createdAt: -1})
+    Posts._ensureIndex({"location.coordinates": "2d"})
+    Posts._ensureIndex({type: 1, toJoin: -1, createdAt: -1})
+    Posts._ensureIndex({type: 1, createdAt: -1})
+    Posts._ensureIndex({type: 1, tags: 1, createdAt: -1})
+    #Posts._ensureIndex({type: 1, title: 1, text: 1, createdAt: -1})
+    Posts._ensureIndex({type: 1, title: 1, createdAt: -1})
+    Posts._ensureIndex({'location.coordinates': "2d",type: 1,  createdAt: -1})
+    Posts._ensureIndex({type: 1, userId: 1})
+    Posts._ensureIndex({type: 1, userId: 1, createdAt: -1})
+    Posts._ensureIndex({type: 1, city: 1, createdAt: -1})
+    Posts._ensureIndex({type: 1, userId: 1, order: -1, images: 1})
+    #Posts.find({type: 'notes', tags: {$in: [tag]}}, {sort: {createdAt: -1},limit:1, fields: {title: 1,type: 1, tags: 1, titleImage: 1, userName: 1}})
+    PushToken._ensureIndex({type: 1, token: 1})
+    PushToken._ensureIndex({userId: 1, type: 1, token: 1})
+    mongoPushToken._ensureIndex({type: 1})
+    mongoPushToken._ensureIndex({userId: 1, type: 1})
+    mongoChatUsers._ensureIndex({userId: 1, toUserId: 1, msgTypeEx: 1})
+    Chats._ensureIndex({userId: 1, createdAt: -1})
+    Chats._ensureIndex({toUserId: 1, createdAt: -1})
+    Chats._ensureIndex({userId: 1, toUserId: 1, createdAt: -1})
+    Chats._ensureIndex({userId: 1, toUserId: 1, msgType: 1, createdAt: -1})
+    ChatUsers._ensureIndex({userId: 1})
+    Photos._ensureIndex({userId: 1})
+    Events._ensureIndex({startDate: 1, endDate: 1})
+    Events._ensureIndex({eventNo: 1})
+    Wifis._ensureIndex({"location.coordinates": "2d"})
+    Wifis._ensureIndex({LastActiveTime: -1})
+    Wifis._ensureIndex({BSSID: 1})
+    Wifis._ensureIndex({createdBy: 1})
+
+    # Begin : added by Peng Zhu <pezhu@actiontec.com> 2015-08-20
+    Meteor.users._ensureIndex({username: 1})
+    #Meteor.users._ensureIndex({username: 1, profile: 1, business: 1})
+    Meteor.users._ensureIndex({username: 1, "profile.nike": 1})
+    Meteor.users._ensureIndex({"profile.tags": 1, "profile.isVip": 1, "profile.city": 1, "profile.createdAt": -1})
+    Meteor.users._ensureIndex({"profile.isBusiness": 1})
+    Meteor.users._ensureIndex({"profile.isBusiness": 1, "business.readCount": 1})
+    Meteor.users._ensureIndex({"profile.isBusiness": 1, "business.wifi.BSSID": 1})
+    Meteor.users._ensureIndex({"profile.isBusiness": 1, "business.readCount": -1})
+    Meteor.users._ensureIndex({"profile.businessLocation.coordinates": "2d", "profile.isBusiness": 1})
+    Meteor.users._ensureIndex({"profile.nike": 1})
+    Meteor.users._ensureIndex({"profile.wifi.BSSID": 1})
+    Meteor.users._ensureIndex({"profile.business": 1, "profile.address": 1, "profile.tel": 1, "business.readCount": -1})
+
+    PushToken._ensureIndex({userId: 1})
+
+    Posts._ensureIndex({type: 1, city: 1, order: -1})
+
+    WifiUsers._ensureIndex({wifiID: 1})
+
+    WifiPosts._ensureIndex({wifiID: 1})
+
+    WifiHistory._ensureIndex({userId: 1, wifiID: 1})
+    WifiHistory._ensureIndex({userId: 1, accessAt: -1})
+
+    WifiFavorite._ensureIndex({userId: 1, wifiID: 1})
+    WifiFavorite._ensureIndex({userId: 1, accessAt: -1})
+
+    SuperWifis._ensureIndex({wifiID: 1, createTime: -1})
+    SuperWifis._ensureIndex({wifiID: 1, importWifiID: 1, createTime: -1})
+    # End added by Peng Zhu <pezhu@actiontec.com> 2015-08-20

@@ -1,0 +1,69 @@
+<!--Tim Zhang-->
+<template name="partner">
+  {{> partner_finding}}
+<!--
+	<div id="partners">
+		<div class="head">
+			<strong>搭伙</strong>
+			<button id="add" class="rightButton btn btn-default">来搭伙</button>
+		</div>
+		<div class="activities">
+			<dl class="title"><dt></dt>
+				<dd>最新活动<i class="fa fa-chevron-right"></i></dd>
+			</dl>
+            {{#if event_2015_01}}
+            <div id="activity_img" style="background: url('/event/2015-01/activity_bg.jpg');background-size: 100% 100%; "></div>
+            {{else}}
+			<div id="activity_img" style="background: url('/activities/activity_bg.jpg');background-size: 100% 100%; "></div>
+            {{/if}}
+		</div>
+		<div class="finding_partners">
+			<dl class="title"><dt></dt>
+				<dd id="finding">正在搭伙<i class="fa fa-chevron-right"></i></dd>
+			</dl>
+			<ul id="find_partners">
+				{{#each latest_find_partners}}
+					<li id="{{_id}}">
+						<div id="{{_id}}" class="gravatar">
+                            <img class="lazy" src="/lazy-loading.gif" data-original="{{userPicture}}">
+						</div>
+						<div id="username">{{nike}}<i class="fa fa-male" style="color: #1E90FF;"></i>
+                            {{#if createdAt}}
+				                <div id="time">{{time_diff createdAt}}</div>
+                            {{/if}}
+						</div>
+						<div id="{{_id}}" class="summary">{{text}}</div>
+					</li>
+					<div class="line">
+						<span></span>
+					</div>
+				{{/each}}
+			</ul>
+		</div>
+		<div class="themes">
+            <div class="theme">
+                <dl class="title"><dt></dt>
+                    <dd>精选主题
+                    </dd>
+                </dl>
+                <ul id="themels">
+                    {{#each themels}}
+                    <li id="{{_id}}" tag="{{tag}}" style="background-image:url({{img}})"><span>{{title}}</span></li>
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="theme">
+                <dl class="title"><dt></dt>
+                    <dd>组团主题</dd>
+                </dl>
+				<ul id="group_themels">
+                    <li id="group1" style="background-image:url(partner/group.1.jpg)"><span>美食团</span></li>
+                    <li id="group2" style="background-image:url(partner/group.2.jpg)"><span>高端团</span></li>
+                    <li id="group3" style="background-image:url(partner/group.3.jpg)"><span>精品团</span></li>
+                </ul>
+            </div>
+        </div>
+
+	</div>
+-->
+</template>

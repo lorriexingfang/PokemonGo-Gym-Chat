@@ -1,0 +1,156 @@
+<template name="home_info">
+	<div class="dashBoard" style="padding-bottom:60px">
+		<div class="head">
+			<strong>
+                {{#if user.profile.nike}}
+                {{user.profile.nike}}
+                {{else}}
+                {{user.username}}
+                {{/if}}
+            </strong>
+            <div id="btn_back" class="leftButton"><i class="fa fa-chevron-left"></i></div>
+			<button id="btn_message" class="h-dh rightButton btn btn-default fa fa-comments">&nbsp;搭话</button>
+		</div>
+        <div class="my_top">
+            <div id="my_face">
+				<img src="{{user.profile.picture}}">
+			</div>
+			<div class="my_sign" id="my_sign" style="height:40px;">{{signature}}</div>
+		</div>
+        <div style="position: absolute;right: 5px;top: 50px;cursor: pointer;margin-top: 6px;text-align: right;" >
+            <button id="btn_report" class="leftButton btn btn-default">举报</button>
+        </div>
+        <div class="user_nav">
+          <ul class="my_btns">
+              {{#if is_service}}
+              <li id="home_service" class="on">喳喳</li>
+              {{else}}
+              <li id="home_service">喳喳</li>
+              {{/if}}
+              {{#if is_photos}}
+              <li id="home_photos" class="on">相册</li>
+              {{else}}
+              <li id="home_photos">相册</li>
+              {{/if}}
+              {{#if is_detailed}}
+              <li id="home_detailed" class="on">详细</li>
+              {{else}}
+              <li id="home_detailed">详细</li>
+              {{/if}}
+          </ul>
+        </div>
+        <div class="tabs_main">
+        {{> Template.dynamic template=myview}}
+        </div>
+	</div>
+</template>
+
+<template name="home_partner">
+    {{#each partner}}
+    {{> theme_list}}
+    {{/each}}
+</template>
+<template name="home_service">
+    {{#each service}}
+        {{#if is_service type}}
+            {{> service_list}}
+        {{else}}
+            {{> theme_list}}
+        {{/if}}
+    {{/each}}
+</template>
+<template name="home_photos">
+    <ul class="my_photos">
+        {{#each images}}
+        <li><img class="lazy" src="/lazy-loading-70.gif" data-original="{{imageUrl}}"></li>
+        {{/each}}
+    </ul>
+</template>
+<template name="home_detailed">
+<!--
+        <ul class="actions">
+            {{#if isVip1}}
+            <li id="vip" style="background-image: url(/my/d.1.png)">当地人</li>
+            {{else}}
+            <li id="vip" style="background-image: url(/my/d.0.png)">当地人</li>
+            {{/if}}
+            {{#if isBusiness1}}
+            <li id="business" style="background-image: url(/my/s.1.png)">商家</li>
+            {{else}}
+            <li id="business" style="background-image: url(/my/s.0.png)">商家</li>
+            {{/if}}
+            {{#each user.profile.tags}}
+            <li style="background-image: url({{getUserTagImage this}})">{{this}}</li>
+            {{/each}}
+            <li id="add" style="background-image: url(/my/add.png)">加认证</li>
+        </ul>
+-->
+		<ul class="my_detailed" style="padding-top:10px">
+            <li id="">认证：
+            {{#if isVip1}}当地人&nbsp;&nbsp;{{/if}}
+            {{#if isBusiness1}}商家{{/if}}
+            </li>
+            {{#if isVip1}}
+            <li id="tel"><i class="fa fa-phone"></i>电话：{{user.profile.tel}}</li>
+            {{/if}}
+            <li id="nike"><i class="fa fa-user"></i>昵称：{{user.profile.nike}}</li>
+            <li id="sex">
+              {{#if isMale}}
+              <i class="fa fa-male" style="color:blue"></i>
+              {{else}}
+              <i class="fa fa-female"></i>
+              {{/if}}
+              性别：{{user.profile.sex}}</li>
+<!--            <li id="birthday"><i class="fa fa-chevron-right"></i>生日：{{user.profile.birthday}}</li>-->
+            <li id="province"><i class="fa fa-map-marker"></i>城市：{{user.profile.city}}</li>
+        </ul>
+        {{#if isBusiness1}}
+        <h3 style="font-size:1em;padding:8px" class="fa fa-newspaper-o"> 商家信息</h3>
+        <ul class="my_detailed" style="padding-top:0">
+            <li id="business"><i class="fa fa-flag-checkered"></i>商家名称：{{user.profile.business}}</li>
+            <li id="tel"><i class="fa fa-phone"></i>联系电话：{{user.profile.tel}}</li>
+            <li id="address"><i class="fa fa-map-marker"></i>商家地址：{{user.profile.address}}</li>
+            <li id="text"><i class="fa fa-newspaper-o"></i>商家简介：</li>
+            <li>{{user.profile.text}}</li>
+		</ul>
+            {{#if isAdmin}}
+            <button class="fa fa-close" id="out_business">点击取消商家认证</button>
+            {{/if}}
+        {{/if}}
+        {{#if isVip1}}
+            {{#if isAdmin}}
+            <button class="fa fa-close" id="out_vip">点击取消当地人认证</button>
+            {{/if}}
+        {{/if}}
+        {{#if isAdmin}}
+            {{#if isVip2}}
+            <h3 style="font-size:1em;padding:8px" class="fa fa-newspaper-o"> 待认证当地人 {{user._id}}</h3>
+            <ul class="my_detailed" style="padding-top:0">
+                <li id="tel"><i class="fa fa-phone"></i>联系电话：{{user.profile.tel}}</li>
+                <li id="tel"><i class="fa fa-tags"></i>身份证号：{{user.profile.identity}}</li>
+            </ul>
+            <ul class="my_photos">
+                {{#each user.profile.approves}}
+                <li><img src="{{img}}"></li>
+                {{/each}}
+            </ul>
+            <button class="fa fa-check" id="check_vip">点击通过当地人认证！</button>
+            {{/if}}
+            {{#if isBusiness2}}
+            <h3 style="font-size:1em;padding:8px" class="fa fa-newspaper-o"> 待认证商家 {{user._id}}</h3>
+            <ul class="my_detailed" style="padding-top:0">
+                <li id="business"><i class="fa fa-flag-checkered"></i>商家名称：{{user.profile.business}}</li>
+                <li id="tel"><i class="fa fa-phone"></i>联系电话：{{user.profile.tel}}</li>
+                <li id="address"><i class="fa fa-map-marker"></i>商家地址：{{user.profile.address}}</li>
+                <li id="text"><i class="fa fa-newspaper-o"></i>商家简介：</li>
+                <li>{{user.profile.text}}</li>
+            </ul>
+            <ul class="my_photos">
+                {{#each user.profile.approves}}
+                <li><img src="{{img}}"></li>
+                {{/each}}
+            </ul>
+            <button class="fa fa-check" id="check_business">点击通过商家认证！</button>
+            {{/if}}
+        {{/if}}
+</template>

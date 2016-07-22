@@ -1,0 +1,43 @@
+<!-- @Tim -->
+<template name="report">
+	<div class="reports">
+      <div class="head">
+        <div id="btn_back" class="leftButton"><i class="fa fa-chevron-left"></i></div>
+        <strong>举报</strong>
+        <button id="btn_submit" class="h-dh rightButton btn btn-default">提交</button>
+      </div>
+      
+      <div id="{{post._id}}" class="my_edit">
+		<textarea type="text" id="report_reason" placeholder="填写举报内容" rows="4" style="width:95%; margin-left:5px; height:250px;"></textarea>
+      </div>
+    </div>
+</template>
+
+<template name="reason">
+	<div id="{{post._id}}" class="reason">
+      <div class="head">
+        <div id="btn_back" class="leftButton"><i class="fa fa-chevron-left"></i></div>
+        <strong>举报原因</strong>
+      </div>
+      <div id="reasonList">
+        <div id="blackboard">
+          <div class="detailLayout" style="padding:7px;">
+              {{#each report}}
+              <ul class="content">
+                <li>
+                  <div class="user">
+                    <div id="{{userId}}" class="faceimg">
+                        <img style="width: 50px;height: 50px;" src="{{get_face userId}}">
+                    </div>
+                    <div id="{{userId}}" class="nickname">{{get_name userId}}</div>
+                    <!--<span class="creatAt" style="float: right;"><i class="fa fa-clock-o"></i>{{format_day createdAt}}</span>-->
+                  </div>
+                  <div>举报原因：{{this.reason}}</div>
+                </li>
+              </ul>
+              {{/each}}
+          </div>
+        </div>
+      </div>
+    </div>
+</template>

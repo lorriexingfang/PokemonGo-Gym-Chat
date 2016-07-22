@@ -1,0 +1,18 @@
+{
+    "version": "2.0.2",
+    "name": "nl.x-services.plugins.toast",
+    "cordova_name": "Toast",
+    "description": "\n    This plugin allows you to show a Toast.\n    A Toast is a little non intrusive buttonless popup which automatically disappears.\n  ",
+    "license": "MIT",
+    "platforms": [
+        "ios",
+        "android",
+        "wp8"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=3.0.0"
+        }
+    ]
+}

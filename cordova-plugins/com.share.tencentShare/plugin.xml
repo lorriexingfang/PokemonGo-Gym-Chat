@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="com.share.tencentShare" version="0.0.1">
+  <name>TencentShare</name>
+  <description>Plugin for QQ , Qzone share</description>
+  <author>lv</author>
+  <license>Apache 2.0</license>
+  <keywords>cordova,device,qq,social</keywords>
+
+  <js-module src="www/tencent_share.js" name="TencentShare">
+    <clobbers target="TencentShare" />
+  </js-module>
+
+  <!-- android -->
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="TencentShare">
+        <param name="android-package" value="com.share.tencentShare.TencentShare"/>
+      </feature>
+    </config-file>
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+      <uses-permission android:name="android.permission.INTERNET" />
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+      <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+      <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+      <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+      <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+      <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+      <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+      <uses-permission android:name="android.permission.GET_TASKS" />
+    </config-file>
+
+    <config-file target="AndroidManifest.xml" parent="/manifest/application">
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+    </config-file>
+
+    <source-file src="src/android/libs/open_sdk_r4547_lite.jar" target-dir="libs"/>
+    <source-file src="src/android/src/TencentShare.java" target-dir="src/com/share/tencentShare" />
+  </platform>
+</plugin>

@@ -1,0 +1,20 @@
+{
+    "version": "0.4.0",
+    "name": "com.plugin.datepicker",
+    "cordova_name": "DatePicker",
+    "description": "Cordova DatePicker Plugin for iOS and Android",
+    "license": "MIT",
+    "keywords": [
+        "cordova",
+        "datepicker",
+        "ios",
+        "ios7",
+        "ios8",
+        "android"
+    ],
+    "platforms": [
+        "android",
+        "ios"
+    ],
+    "engines": []
+}

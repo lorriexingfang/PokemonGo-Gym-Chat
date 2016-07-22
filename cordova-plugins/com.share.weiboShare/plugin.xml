@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="com.share.weiboShare" version="0.0.1">
+  <name>WeiboShare</name>
+  <description>Plugin for WeiboShare share</description>
+  <author>lv</author>
+  <license>Apache 2.0</license>
+  <keywords>cordova,device,weibo,sina,social,share</keywords>
+
+  <js-module src="www/weibo_share.js" name="WeiboShare">
+    <clobbers target="WeiboShare" />
+  </js-module>
+
+  <!-- android -->
+  <platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="WeiboShare">
+        <param name="android-package" value="com.share.weiboShare.WeiboShare"/>
+      </feature>
+    </config-file>
+    <config-file target="AndroidManifest.xml" parent="/manifest">
+      <uses-permission android:name="android.permission.INTERNET" />
+      <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+      <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+      <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    </config-file>
+    <config-file target="AndroidManifest.xml" parent="/manifest/application">
+      <activity android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser" 
+            android:configChanges="keyboardHidden|orientation"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" >
+      </activity>
+      <service android:name="com.sina.weibo.sdk.net.DownloadService"
+            android:exported="false">
+      </service>
+    </config-file>
+
+    <source-file src="src/android/libs/weibosdkcore.jar" target-dir="libs"/>
+    <source-file src="src/android/libs/armeabi/libweibosdkcore.so" target-dir="libs/armeabi"/>
+    <source-file src="src/android/libs/mips/libweibosdkcore.so" target-dir="libs/mips"/>
+    <source-file src="src/android/libs/x86/libweibosdkcore.so" target-dir="libs/x86"/>
+    <source-file src="src/android/src/WeiboShare.java" target-dir="src/com/share/weiboShare" />
+    <source-file src="src/android/src/Constants.java" target-dir="src/com/share/weiboShare" />
+    <source-file src="src/android/src/AccessTokenKeeper.java" target-dir="src/com/share/weiboShare" />
+
+  </platform>
+</plugin>
