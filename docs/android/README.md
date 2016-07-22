@@ -11,14 +11,12 @@
 All the three steps above can be done by using Ubuntu Make:
 
 1\. Add the Ubuntu Make ppa:
-
     ```
 	$ sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
 	$ sudo apt-get update
 	```
 
 2\. Install Ubuntu Make:
-
     ```
 	$ sudo apt-get install ubuntu-make
 	```
@@ -71,9 +69,8 @@ Or on the phone that has been connected to the computer by a USB cable:
 Solution:
 
 	Make sure the phone is connected to the computer.To check if the computer can detect the phone, run:
-	    ```
+
 		$ adb devices
-		```
 
 	Then we need to enable the phone's On-device Developer Options:
 		https://developer.android.com/studio/run/device.html#developer-device-options
@@ -119,20 +116,17 @@ Solution:
 		com/android/dx/command/Main : Unsupported major.minor version 52.0
 	
 Solution:
-
 	The issue is because of Java version mismatch. Referring to the Wikipedia Java Class Reference : J2SE 8 = 52.The error regarding the unsupported major.minor version is because during compile time we are using a higher JDK and a lower JDK during runtime. Run:
-	```
-	$ java --version
-	``` 
+
+	$ java --version 
 
 	to see the JDK version.
 	Generally, if we use Umake, the default JDK version is 1.7 but we need JDK 1.8.
 	To update the JDK version, run: 
-	    ```
+
 		$ sudo add-apt-repository ppa:webupd8team/java
 		$ sudo apt-get update
 		$ sudo apt-get install oracle-java8-installer
-		```
 		
 5\. When running the app on the phone:
 
@@ -144,6 +138,5 @@ Solution:
 Solution:
 
     Pokegmon Gym Club should be run on Meteor 1.2.1. Just run the app by:
-    ```
+
 	$ meteor run android-device --release 1.2.1
-	```
