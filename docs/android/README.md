@@ -23,9 +23,10 @@ Use Ubuntu Make to install Android Studio and all dependencies:
 
 	$ umake android
 
-3\. Install Meteor from [**Meteor Installation] (https://www.meteor.com/install)
-
+3\. Install Meteor from [Meteor Installation] (https://www.meteor.com/install)
+   ```
    $ curl https://install.meteor.com/ | sh
+   ```
 
 4\. Set environment variables:
 
