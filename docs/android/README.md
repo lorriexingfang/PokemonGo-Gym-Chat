@@ -36,34 +36,28 @@ Use Ubuntu Make to install Android Studio and all dependencies:
 4\. Set environment variables:
 
 Add these lines on ~/.bashrc:
-
 	```
 	export ANDROID_HOME="/home/<username>/Android/Sdk"
 	export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 	```
 
 After these steps, we change to the directory of our project and add Cordova platform:
-
-
     ```
     $ cd PokemonGo-Chat/pokemonchat-mobile
 	$ meteor add-platform android
 	```
 
 Pokegmon Gym Club should be run on Meteor 1.2.1. Just run the app by:
-
     ```
 	$ meteor run android-device --release 1.2.1
 	```
 
 Then we can run the app on the emulator by:
-
     ```
 	$ meteor run android
     ```
 
 Or on the phone that has been connected to the computer by a USB cable:
-
     ```
 	$ meteor run android-device
 	```
@@ -77,8 +71,6 @@ Or on the phone that has been connected to the computer by a USB cable:
 Solution:
 
 	Make sure the phone is connected to the computer.To check if the computer can detect the phone, run:
-
-
 	    ```
 		$ adb devices
 		```
@@ -129,8 +121,6 @@ Solution:
 Solution:
 
 	The issue is because of Java version mismatch. Referring to the Wikipedia Java Class Reference : J2SE 8 = 52.The error regarding the unsupported major.minor version is because during compile time we are using a higher JDK and a lower JDK during runtime. Run:
-
-
 	```
 	$ java --version
 	``` 
@@ -138,8 +128,6 @@ Solution:
 	to see the JDK version.
 	Generally, if we use Umake, the default JDK version is 1.7 but we need JDK 1.8.
 	To update the JDK version, run: 
-
-
 	    ```
 		$ sudo add-apt-repository ppa:webupd8team/java
 		$ sudo apt-get update
@@ -156,8 +144,6 @@ Solution:
 Solution:
 
     Pokegmon Gym Club should be run on Meteor 1.2.1. Just run the app by:
-
-
     ```
 	$ meteor run android-device --release 1.2.1
 	```
