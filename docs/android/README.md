@@ -1,4 +1,4 @@
-# Build locally Prerequisites(for Android):
+### Build locally Prerequisites(for Android):
 
 1\. Install JDK.
 
