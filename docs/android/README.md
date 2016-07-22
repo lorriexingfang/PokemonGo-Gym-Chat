@@ -1,4 +1,4 @@
-# Installing Prerequisites(for Android):
+# Build locally Prerequisites(for Android):
 
 1\. Install JDK.
 
@@ -9,13 +9,16 @@
 4\. Set necessary environment variables.
 
 All the three steps above can be done by using Ubuntu Make:
+
 1\. Add the Ubuntu Make ppa:
+
     ```
 	$ sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
 	$ sudo apt-get update
 	```
 
-2\. Install Ubuntu Make:
+2 Install Ubuntu Make:
+
     ```
 	$ sudo apt-get install ubuntu-make
 	```
@@ -25,12 +28,12 @@ Use Ubuntu Make to install Android Studio and all dependencies:
 	$ umake android
 	```
 
-3\. Install Meteor from [**Meteor Installation] (Install Meteor (https://www.meteor.com/install)
+3 Install Meteor from [**Meteor Installation] (Install Meteor (https://www.meteor.com/install)
    ```
    $ curl https://install.meteor.com/ | sh
    ```
 
-4\. Set environment variables:
+4 Set environment variables:
 Add these lines on ~/.bashrc:
 	```
 	export ANDROID_HOME="/home/<username>/Android/Sdk"
@@ -55,7 +58,8 @@ Or on the phone that has been connected to the computer by a USB cable:
 	```
 
 ###Possible Errors and Solutions:
-1\. When running the app on the phone:
+
+1 When running the app on the phone:
 	name: 'CordovaError',
 	message: 'Failed to deploy to device, no devices found.',
 
@@ -67,7 +71,7 @@ Solution:
 	Then we need to enable the phone's On-device Developer Options:
 		https://developer.android.com/studio/run/device.html#developer-device-options
 		
-2\. When staring the emulator, the process is stuck in "Staring app on Android Emulator":
+2 When staring the emulator, the process is stuck in "Staring app on Android Emulator":
 
 Solution:
 	Run "$ meteor run android --verbose" to see the detailed requirements, here for my:
@@ -81,7 +85,7 @@ Solution:
 		
 		Here we can create a new emulator with the proper parameters, but as for my system, the KVM is not supported.
 		
-3\. When adding Cordova platform:
+3 When adding Cordova platform:
 		Your system does not yet seem to fulfil all requirements to build apps for Android.
 		status of the requirements:                   
 		✓ Java JDK                                    
@@ -100,7 +104,7 @@ Solution:
 	Delete 'android' under <project>/.meteor/local/platforms.
 	run "$ meteor add-platform android"
 	
-4\. When running the app on the phone:
+4 When running the app on the phone:
 		Exception in thread "main" java.lang.UnsupportedClassVersionError:
 		com/android/dx/command/Main : Unsupported major.minor version 52.0
 	
@@ -115,7 +119,7 @@ Solution:
 		$ sudo apt-get install oracle-java8-installer
 		```
 		
-5\. When running the app on the phone:
+5 When running the app on the phone:
 			% Error during processing of action! Attempting to revert...
 			% Error during processing of action! Attempting to revert...
 			% Error during processing of action! Attempting to revert...                    

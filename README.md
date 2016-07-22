@@ -13,7 +13,6 @@
 
 1. [Description](#1-description)
 2. [Implementation](#2-implementation)
-- [Android Guide](docs/android/README.md)
 
 ## 1. Description
 
