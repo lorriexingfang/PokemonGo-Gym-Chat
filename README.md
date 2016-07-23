@@ -34,7 +34,7 @@ Discover and explore your nearby Pokemon Gyms.
 
 - [Android Guide](docs/android/README.md)
 
-- [iOS Guide](docs/iOS/README.md)
+- [iOS Guide](docs/ios/README.md)
 
 ## 3. Implementation
 
