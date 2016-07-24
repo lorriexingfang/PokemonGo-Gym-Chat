@@ -39,7 +39,7 @@ if (Meteor.isCordova){
             };
             ft.upload(result.orignalURI, uri, function(e){
                 var filename = result.acceccURI.replace(/^.*[\\\/]/, '');
-                var cdnFileName = "http://data.youzhadahuo.com/" + filename;
+                var cdnFileName = "http://localhost.com/" + filename;
                 DEBUG && console.log("cdnFileName = "+cdnFileName);
                 //def.resolve({url: cdnFileName});
                 if(callback){
@@ -95,7 +95,7 @@ if (Meteor.isCordova){
         };
         ft.upload(result.orignalURI, uri, function(e){
             var filename = result.acceccURI.replace(/^.*[\\\/]/, '');
-            var cdnFileName = "http://data.youzhadahuo.com/" + filename;
+            var cdnFileName = "http://localhost.com/" + filename;
             DEBUG && console.log("cdnFileName = "+cdnFileName);
             def.resolve({url: cdnFileName});
             if(callback){
@@ -786,7 +786,7 @@ if(!Meteor.isCordova){
   uploadFile = function(callback, limit){
     var def = $.Deferred();
     var filename = 'http://localhost:3000/' + (new Mongo.ObjectID)._str + '.png';
-    //callback('http://data.youzhadahuo.com/jc73WcijugBX3tKJv_1435822877599.jpg');
+    //callback('http://localhost.com/jc73WcijugBX3tKJv_1435822877599.jpg');
 
     def.resolve([{url: filename}]);
     callback(filename);

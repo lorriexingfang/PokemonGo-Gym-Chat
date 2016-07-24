@@ -502,7 +502,7 @@ if (Meteor.isClient) {
                     };
                     ft.upload(result.orignalURI, uri, function(e){
                         var filename = result.acceccURI.replace(/^.*[\\\/]/, '');
-                        var cdnFileName = "http://data.youzhadahuo.com/" + filename;
+                        var cdnFileName = "http://localhost.com/" + filename;
                         DEBUG && console.log("cdnFileName = "+cdnFileName);
                         def.resolve({url: cdnFileName});
                         if(callback){
@@ -527,7 +527,7 @@ if (Meteor.isClient) {
                     toUserName: toUser.profile.nike === void 0 || toUser.profile.nike === "" ? toUser.username : toUser.profile.nike,
                     toUserPicture: toUser.profile.picture,
                     text: false,
-                    photoPath: "http://data.youzhadahuo.com/" + filename,
+                    photoPath: "http://localhost.com/" + filename,
                     isRead: false,
 		    msgType:'wifiCard',
                     readTime: void 0,

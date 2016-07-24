@@ -343,7 +343,7 @@ Template.wifiUserWifiHistory.helpers({
   },
   getWifiPicture: function(latestPicture) {
     if (latestPicture == undefined) {
-        return 'http://data.youzhadahuo.com/fZ8PtzM4rmYJKpCaz_1447184412955_cdv_photo_001.jpg';
+        return 'http://localhost.com/fZ8PtzM4rmYJKpCaz_1447184412955_cdv_photo_001.jpg';
     } else {
         return latestPicture;
     }
@@ -513,7 +513,7 @@ Template.wifiUserWifiNearby.helpers({
   },
   getWifiPicture: function(latestPicture) {
     if (latestPicture == undefined) {
-        return 'http://data.youzhadahuo.com/fZ8PtzM4rmYJKpCaz_1447184412955_cdv_photo_001.jpg';
+        return 'http://localhost.com/fZ8PtzM4rmYJKpCaz_1447184412955_cdv_photo_001.jpg';
     } else {
         return latestPicture;
     }
@@ -873,7 +873,7 @@ Template.wifiUserWifiFavorite.helpers({
   },
   getWifiPicture: function(latestPicture) {
     if (latestPicture == undefined) {
-        return 'http://data.youzhadahuo.com/fZ8PtzM4rmYJKpCaz_1447184412955_cdv_photo_001.jpg';
+        return 'http://localhost.com/fZ8PtzM4rmYJKpCaz_1447184412955_cdv_photo_001.jpg';
     } else {
         return latestPicture;
     }

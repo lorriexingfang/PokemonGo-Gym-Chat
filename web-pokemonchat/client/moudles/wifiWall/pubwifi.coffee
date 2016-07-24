@@ -245,11 +245,11 @@ Template.wifiPubWifiIndex.helpers
 
     ##remove the default image, if has other images
     for i in [0..urls.length - 1]
-        if urls[i] and urls[i].src is 'http://data.youzhadahuo.com/fZ8PtzM4rmYJKpCaz_1447184412955_cdv_photo_001.jpg'
+        if urls[i] and urls[i].src is 'http://localhost.com/fZ8PtzM4rmYJKpCaz_1447184412955_cdv_photo_001.jpg'
             urls.splice(i, 1)
 
     if urls.length == 0
-      urls.push({id: '1234567890smaple',src:'http://data.youzhadahuo.com/fZ8PtzM4rmYJKpCaz_1447184412955_cdv_photo_001.jpg'})
+      urls.push({id: '1234567890smaple',src:'http://localhost.com/fZ8PtzM4rmYJKpCaz_1447184412955_cdv_photo_001.jpg'})
 
     if urls.length > 6
       for i in [0..5]

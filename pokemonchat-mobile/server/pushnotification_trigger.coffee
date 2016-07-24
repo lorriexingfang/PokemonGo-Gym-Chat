@@ -323,14 +323,14 @@ if Meteor.isServer
                 }
               }
           else
-              #if doc.images.length>0 then doc.images[0].url else 'http://data.youzhadahuo.com/fZ8PtzM4rmYJKpCaz_1447184412955_cdv_photo_001.jpg'
+              #if doc.images.length>0 then doc.images[0].url else 'http://localhost.com/fZ8PtzM4rmYJKpCaz_1447184412955_cdv_photo_001.jpg'
               mongoChatUsers.insert {
                 userId: toUser.userId
                 userName: toUser.userName
                 userPicture: toUser.userPicture
                 toUserId: doc.wifiID
                 toUserName: wifi.nike
-                toUserPicture: 'http://data.youzhadahuo.com/fZ8PtzM4rmYJKpCaz_1447184412955_cdv_photo_001.jpg'
+                toUserPicture: 'http://localhost.com/fZ8PtzM4rmYJKpCaz_1447184412955_cdv_photo_001.jpg'
                 waitReadCount: incValue
                 lastText: text
                 lastTime: doc.createTime
@@ -371,7 +371,7 @@ if Meteor.isServer
                 userPicture: toUser.userPicture
                 toUserId: doc.wifiID
                 toUserName: wifi.nike
-                toUserPicture: 'http://data.youzhadahuo.com/fZ8PtzM4rmYJKpCaz_1447184412955_cdv_photo_001.jpg'
+                toUserPicture: 'http://localhost.com/fZ8PtzM4rmYJKpCaz_1447184412955_cdv_photo_001.jpg'
                 waitReadCount: incValue
                 lastText: text
                 lastTime: commentsData.createdAt

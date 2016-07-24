@@ -63,7 +63,7 @@ Template.my_blackboard_list.helpers
         return GetTime0(now - val)
     getWifiPicture: (latestPicture) ->
         if latestPicture == undefined
-            return 'http://data.youzhadahuo.com/fZ8PtzM4rmYJKpCaz_1447184412955_cdv_photo_001.jpg'
+            return 'http://localhost.com/fZ8PtzM4rmYJKpCaz_1447184412955_cdv_photo_001.jpg'
         else
             return latestPicture
     get_distance: (val) ->

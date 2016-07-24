@@ -100,7 +100,7 @@ class chatUploadImage
     image.upload()
     
   test: (callback)->
-    image = {id: (new Mongo.ObjectID())._str, userId: Session.get("chat_to_userId"), url:'http://data.youzhadahuo.com/sywFzQ5sDbKEF4PQk_1442975583590_Temp_timg33-501911568.bin', filename:'', URI:''}
+    image = {id: (new Mongo.ObjectID())._str, userId: Session.get("chat_to_userId"), url:'http://localhost.com/sywFzQ5sDbKEF4PQk_1442975583590_Temp_timg33-501911568.bin', filename:'', URI:''}
     callback(image)
     
   upload: (max_number, userId, callback, completedCallback)->
