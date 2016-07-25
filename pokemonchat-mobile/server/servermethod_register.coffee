@@ -475,12 +475,10 @@ if Meteor.isServer
           # 发给所有用户
           console.log "pushnotification to #{target} param: #{parameters}"
           JPush = Meteor.npmRequire "jpush-sdk"
-          client = JPush.buildClient 'cc5950acda12cd54ad0e6489', 'c949a9d6f13cb786f4540ec0'
+          client = JPush.buildClient 'cc5950acda12cd54ad1e6480', 'c959a9d6f23cb786f4540ec0'
           isTest = isTest || false
 
           if isTest
-            # 测试的JPush Key
-            # client = JPush.buildClient 'ca668e313d16c914e5eb6b53', '48d18c5a862e4622dae39913'
             testUsers = Meteor.users.find({'profile.isTestUser': true}).fetch()
             testUserIds = new Array()
             for item in testUsers

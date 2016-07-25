@@ -1,7 +1,7 @@
 if Meteor.isServer
   Meteor.startup ()->
     JPush = Meteor.npmRequire "jpush-sdk"
-    client = JPush.buildClient 'cc5950acda12cd54ad0e6489', 'c949a9d6f13cb786f4540ec0'
+    client = JPush.buildClient 'cc5960acda12cd14ad0e7489', 'c949a9d6f13cb786f4540ec1'
 
     # 聊天信息推送
     mongoChats.after.insert (userId, doc)->

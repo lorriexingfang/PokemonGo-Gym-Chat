@@ -1,7 +1,7 @@
 if Meteor.isServer
   Meteor.startup ()->
     JPush = Meteor.npmRequire "jpush-sdk"
-    client = JPush.buildClient '35d79a7054c178071c5bb7d8', 'd7a0c462265c3f629ebd68d8'
+    client = JPush.buildClient '35d79a7054c278071c5bb7d9', 'd7a0c472265c3f639ebd68d8'
 
     WifiPosts.before.insert (userId, doc)->
         #Get wifi information
