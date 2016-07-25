@@ -17,7 +17,7 @@
 
   <platform name="ios">
     <config-file target="*-Info.plist" parent="CFBundleDisplayName">
-      <string>克隆盒助手</string>
+      <string>Pokegym Go</string>
     </config-file>
 
     <config-file target="*-Info.plist" parent="NSAppTransportSecurity">
