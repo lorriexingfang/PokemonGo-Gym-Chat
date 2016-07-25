@@ -21,7 +21,7 @@
 Discover and explore your nearby Pokemon Gyms.
 
 
-#FEATURES
+###FEATURES
 
 -- A Pokemon fans' club which contains all information about nearby Pokemon gyms
 
@@ -41,7 +41,7 @@ Discover and explore your nearby Pokemon Gyms.
 
 The whole project can be divided into client and server sides. In the following I will explain how to implement both sides. But before that, I suppose you have already set up your own server.
 
-# Server address and File storage service url/keys
+### Server address and File storage service url/keys
 
 Currently we are using Aliyun's ECS/OSS/CDN service. You can choose other services (Amazon S3, etc) based on our architecture. I will show how to modify the code if you also want to use Aliyun's service. 
 
@@ -65,19 +65,19 @@ and "getBCSSigniture"
 
 Replace the keys with your own keys.
 
-# App/Facebook/Wechat's ID/keys
+### App/Facebook/Wechat's ID/keys
 
 Sometime you will use Facebook/Wechat/Twitter Login in this application. We support this feature but you have to use your own ID and keys:
 
 1\. Under ./PokemonGo-Chat/pokemonchat-mobile, there is a mobile-config.js file. Check it out and replace the current one with yours.
 
-# For monitoring the server
+### For monitoring the server
 
 We use [Kadira] (https://kadira.io/) to monitor server performance. It's not necessary if you have other ways of monitoring the whole service.
 
 1\. The setups for Kadira is here: ./pokemonchat-mobile/server/kadira.coffee . Replace it with your Kadira account.
 
-#Push notification keys
+### Push notification keys
 
 iOS:
 
@@ -89,7 +89,7 @@ We use [jpush] (https://www.jiguang.cn/) to enable push notification on Android.
 
 Above are probably everything you will do for replacing setups with your own.
 
-#Deploy service on server
+### Deploy service on server
 
 We use [mup] (https://github.com/arunoda/meteor-up) to deploy the service on server. To do it, please:
 
@@ -108,3 +108,7 @@ If you follow everything I have mentioned above, your will have your real Pokemo
 
 ## 4. Tips
 
+1\. You can delete ./pokemonchat-mobile/client/scripts/disable_console_log.js and ./pokemonchat-mobile/client/scripts/disable_hot_code_push.js when you develop in your local environment. It will help to
+
+a) Print out the console log
+b) Enable the hotcode push feature. So your modification will be applied immediately and you do not have to stop and rerun the code.
