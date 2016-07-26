@@ -471,26 +471,26 @@ if Meteor.isClient
         'submit #form-login':(e,t)->
             e.preventDefault()
             if Meteor.status().connected isnt true
-                PUB.toast '当前为离线状态,请检查网络连接'
+                PUB.toast 'You are offline, please check your internet connection'
                 return false
             t.find('#sub-login').disabled = true
-            t.find('#sub-login').value = '正在登录...'
+            t.find('#sub-login').value = 'Logging in...'
             name = t.find('#name').value.toLowerCase().replace('@','#')
             email = t.find('#name').value.toLowerCase()
             pass = t.find('#pass').value
             if name is '' or pass is ''
-                PUB.toast '邮箱或密码不能为空!'
+                PUB.toast 'Please enter both email and password!'
                 t.find('#sub-login').disabled = false
-                t.find('#sub-login').value = '登录'
+                t.find('#sub-login').value = 'Log in'
                 return false
 
-            Template.public_loading_index.__helpers.get('show')('登录中，请稍候...')
+            Template.public_loading_index.__helpers.get('show')('Logging in...')
             Meteor.loginWithPassword name, pass,(err)->
                 if err
                     #console.log err1
-                    PUB.toast '帐号或密码有误！'
+                    PUB.toast 'Invalid email or password!！'
                     t.find('#sub-login').disabled = false
-                    t.find('#sub-login').value = '登录'
+                    t.find('#sub-login').value = 'Log in'
                 else if Session.get("login_return_view") is undefined or Session.get("login_return_view") is ''
                     setTimeout(loginSuccess(name, email), 1000)
                     Session.set 'myview','my_detailed'

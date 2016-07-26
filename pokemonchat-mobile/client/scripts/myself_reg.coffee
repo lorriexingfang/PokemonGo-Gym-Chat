@@ -162,38 +162,38 @@ if Meteor.isClient
             pass2 = t.find('#pass2').value
             myRegExp = /[a-z0-9-]{1,30}#[a-z0-9-]{1,65}.[a-z]{2,6}/ ;
             if names is ''
-#                Meteor.call 'toast','请输入常用邮箱！',(e)->
-                PUB.toast '请输入常用邮箱！'
+#                Meteor.call 'toast','Please enter your email address!',(e)->
+                PUB.toast 'Please enter your email address!'
                 t.find('#sub-registered').disabled = false
-                t.find('#sub-registered').value = '注 册'
+                t.find('#sub-registered').value = 'Sign up'
             else if myRegExp.test(names) is false
-#                Meteor.call 'toast','你的邮箱有误！',(e)->
-                PUB.toast '你的邮箱有误！'
+#                Meteor.call 'toast','Invalid eamil address!',(e)->
+                PUB.toast 'Invalid eamil address!'
                 t.find('#sub-registered').disabled = false
-                t.find('#sub-registered').value = '注 册'
+                t.find('#sub-registered').value = 'Sign up'
 #            else if code isnt Session.get('code')
 #                Meteor.call 'toast','验证码不正确！',(e)->
 #                t.find('#sub-registered').disabled = false
-#                t.find('#sub-registered').value = '注 册'
+#                t.find('#sub-registered').value = 'Sign up'
             else if nike is ''
-#                Meteor.call 'toast','请输入昵称！',(e)->
-                PUB.toast '请输入昵称！'
+#                Meteor.call 'toast','Please enter your nickname!',(e)->
+                PUB.toast 'Please enter your nickname!'
                 t.find('#sub-registered').disabled = false
-                t.find('#sub-registered').value = '注 册'
+                t.find('#sub-registered').value = 'Sign up'
             else if pass1.length < 6
-#                Meteor.call 'toast','密码至少要6位！',(e)->
-                PUB.toast '密码至少要6位！'
+#                Meteor.call 'toast','Password should contain at least 6 words!',(e)->
+                PUB.toast 'Password should contain at least 6 words!'
                 t.find('#sub-registered').disabled = false
-                t.find('#sub-registered').value = '注 册'
+                t.find('#sub-registered').value = 'Sign up'
             else if pass1 isnt pass2
-#                Meteor.call 'toast','两次密码输入不一致！',(e)->
-                PUB.toast '两次密码输入不一致！'
+#                Meteor.call 'toast','Passwords don't match!',(e)->
+                PUB.toast 'Passwords don\'t match!'
                 t.find('#sub-registered').disabled = false
-                t.find('#sub-registered').value = '注 册'
+                t.find('#sub-registered').value = 'Sign up'
             else if t.find('#deal_check').checked is false
                 PUB.toast '请同意小店公告服务告知！'
                 t.find('#sub-registered').disabled = false
-                t.find('#sub-registered').value = '注 册'
+                t.find('#sub-registered').value = 'Sign up'
             else
 #                由于本地的数据不一定是最新的，以下判断没有实际价值
 #                #判断是否重复邮箱注册
@@ -201,10 +201,10 @@ if Meteor.isClient
 #                Meteor.subscribe 'loginUserInfo', names, email
 #                _user  = Meteor.users.findOne({$or:[{'username':names},{'emails.address':email}]})
 #                if _user isnt undefined
-##                    Meteor.call 'toast','邮箱已被使用! ',(e)->
+##                    Meteor.call 'toast','This email has been used! ',(e)->
 #                    PUB.toast '邮箱已被使用！'
 #                    t.find('#sub-registered').disabled = false
-#                    t.find('#sub-registered').value = '注 册'
+#                    t.find('#sub-registered').value = 'Sign up'
 #                    return false
 #                #判断是否重复昵称
 #                _user  = Meteor.users.findOne({'profile.nike':nike})
@@ -212,7 +212,7 @@ if Meteor.isClient
 ##                    Meteor.call 'toast','昵称已被使用! ',(e)->
 #                    PUB.toast '昵称已被使用！'
 #                    t.find('#sub-registered').disabled = false
-#                    t.find('#sub-registered').value = '注 册'
+#                    t.find('#sub-registered').value = 'Sign up'
 #                    return false
                 try
                     uuid = device.uuid
@@ -225,20 +225,20 @@ if Meteor.isClient
 ##                        Meteor.call 'toast','此设备已经注册超过两个用户',(e)->
 #                        PUB.toast '此设备已经注册超过两个用户！'
 #                        t.find('#sub-registered').disabled = false
-#                        t.find('#sub-registered').value = '注 册'
+#                        t.find('#sub-registered').value = 'Sign up'
 #                        return false
 
                 Meteor.call 'isDeviceIdUsed',uuid,(error,result)->
                     if result
                         PUB.toast '您的手机已注册2个帐号！'
                         t.find('#sub-registered').disabled = false
-                        t.find('#sub-registered').value = '注 册'
+                        t.find('#sub-registered').value = 'Sign up'
                     else
                         Meteor.call 'isUserNikeUsed',nike,(error,result)->
                             if result
                                 PUB.toast '昵称已经存在！'
                                 t.find('#sub-registered').disabled = false
-                                t.find('#sub-registered').value = '注 册'
+                                t.find('#sub-registered').value = 'Sign up'
                             else
                                 location = Session.get('location')
                                 geometry = null
@@ -265,7 +265,7 @@ if Meteor.isClient
                 #                            Meteor.call 'toast','注册失败！',(e)->
                                             PUB.toast '注册失败，邮箱或昵称可能已经存在！'
                                             t.find('#sub-registered').disabled = false
-                                            t.find('#sub-registered').value = '注 册'
+                                            t.find('#sub-registered').value = 'Sign up'
                                         else
 #                                            Meteor.subscribe('chats')
 #                                            Meteor.subscribe('chatUsers')

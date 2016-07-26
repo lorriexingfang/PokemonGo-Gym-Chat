@@ -37,7 +37,7 @@ Template.wifiGuide.events
     $('#wifi_guide_box').remove()
   'click .btn-yes': (e, t)->
     if (Meteor.userId() is null)
-      PUB.toast('注册登录后才能创建哦，赶快注册吧！')
+      PUB.toast('Please sign up first to create a gym!')
       $('#wifi_guide_box').remove()
       $('#wrap').show()
       $('#footer').show()
@@ -52,7 +52,7 @@ Template.wifiGuide.events
 
   'click .create-board': ()->
     if (Meteor.userId() is null)
-      PUB.toast('注册登录后才能创建哦，赶快注册吧！')
+      PUB.toast('Please sign up first to create a gym!')
       Session.set('view', 'login')
       return
 
