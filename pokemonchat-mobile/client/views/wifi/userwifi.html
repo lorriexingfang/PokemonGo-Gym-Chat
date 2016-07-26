@@ -158,7 +158,7 @@
                 {{> wifiUserWifiShowImage data=this}}
               {{/with}}
               <h1>{{nike}}</h1>
-              <h2>名称:{{SSID}} 密码：{{trunc_str 12 passwd}}</h2>
+              <!--<h2>名称:{{SSID}} 密码：{{trunc_str 12 passwd}}</h2>-->
             </div>
             <div class="text">
               <i class="fa fa-map-marker">{{gec _id location}}<strong>{{get_distance this}}</strong></i>
@@ -255,11 +255,11 @@
           <div class="wifi-pic-desc">
             <div class="wifi-pic-desc-bg"></div>
             <h1>{{nike}}</h1>
-            {{#if isPwd passwd}}
+            <!--{{#if isPwd passwd}}
               <h2>{{_ "wifiName"}}:{{SSID}} {{_ "passWord"}}：{{passwd}}</h2>
             {{else}}
               <h2>{{_ "wifiName"}}:{{SSID}} {{_ "passWord"}}：这个热点不需要密码哦~</h2>
-            {{/if}}
+            {{/if}}-->
             <div class="pl_head">
               <div class="portrait">
                   <dl>
