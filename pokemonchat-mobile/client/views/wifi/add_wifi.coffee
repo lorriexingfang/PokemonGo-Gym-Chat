@@ -11,12 +11,12 @@ Template.wifiAddWifi.events
     signature = $('#wifi_signature').val()
 
     if(nike is '' or nike is '' or nike is undefined)
-        PUB.toast('请给你的小店公告取个名字吧！')
+        PUB.toast('Please add a name to your Gym!')
         return
 
     #更新用户business.wifi
     if(!testDeviceConnectedWifi())
-        PUB.toast('当前没有连接到WIFI！')
+        PUB.toast('WIFI not currently available!')
     else
         navigator.wifi.getConnectedWifiInfo(
             (wifi)->
@@ -54,7 +54,7 @@ Template.wifiAddWifi.events
                 Meteor.call "isBSSIDRegisteredOnBusinessOrGraffiti", wifi.BSSID, (error, result) ->
                       closeLoading()
                       if error
-                        PUB.toast('增加失败，请重试！');
+                        PUB.toast('Failed, please retry!');
                       else if result.result is true
                         PUB.toast(result.reason)
                       else
@@ -117,7 +117,7 @@ Template.wifiAddWifi.events
                         if upload_images.length > 0
                             Template.public_upload_index.__helpers.get('uploadImages')((isSuc)->
                                 if isSuc is false
-                                    PUB.toast('小店公告图片发表失败，请重新发表。')
+                                    PUB.toast('Image uploading failed, please retry!')
                                 else
                                     addWifiBottomHalf()
                             )
@@ -125,7 +125,7 @@ Template.wifiAddWifi.events
                             addWifiBottomHalf()    
                         
             ()->
-                PUB.toast('获取Wi-Fi信息失败！');
+                PUB.toast('Failed to get WIFI information!');
         )
 
 addWiFiToWiFiHistory = (wifiID)->
